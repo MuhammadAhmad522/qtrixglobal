@@ -1,0 +1,448 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth" style=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "safety-orange": "#F97316",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2c3134",
+                        "surface-container-high": "#e4e9ed",
+                        "on-secondary-fixed-variant": "#783200",
+                        "secondary": "#9d4300",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-container-highest": "#dfe3e7",
+                        "inverse-primary": "#bec6e0",
+                        "industrial-navy": "#0F172A",
+                        "on-surface": "#171c1f",
+                        "inverse-on-surface": "#edf1f5",
+                        "steel-gray": "#64748B",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#dae2fd",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#5c2400",
+                        "on-secondary": "#ffffff",
+                        "primary": "#000000",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "tertiary-fixed": "#d5e3fd",
+                        "surface-container-low": "#f0f4f8",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "on-error": "#ffffff",
+                        "on-background": "#171c1f",
+                        "concrete-white": "#F8FAFC",
+                        "on-tertiary-container": "#76859b",
+                        "background": "#f6fafe",
+                        "surface": "#f6fafe",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "surface-bright": "#f6fafe",
+                        "surface-dim": "#d6dade",
+                        "secondary-container": "#fd761a",
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "tertiary": "#000000",
+                        "primary-container": "#131b2e",
+                        "secondary-fixed-dim": "#ffb690",
+                        "primary-fixed-dim": "#bec6e0",
+                        "surface-container": "#eaeef2",
+                        "secondary-fixed": "#ffdbca",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#565e74",
+                        "on-surface-variant": "#45464d",
+                        "tertiary-container": "#0d1c2f",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#dfe3e7",
+                        "outline": "#76777d",
+                        "on-primary-container": "#7c839b",
+                        "on-secondary-fixed": "#341100"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-concrete-white text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-industrial-navy dark:bg-industrial-navy w-full top-0 sticky z-50 border-b border-steel-gray">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-safety-orange">
+                Qtrix Global
+            </div>
+<nav class="hidden md:flex gap-8">
+<a href="#" class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors">Home</a>
+<a href="#" class="font-body-md text-body-md text-safety-orange border-b-2 border-safety-orange pb-1">Products</a>
+<a href="#" class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors">About Us</a>
+<a href="#" class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="hidden lg:block relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-steel-gray">search</span>
+<input type="text" placeholder="Search Materials..." class="bg-primary-container border-steel-gray text-on-primary rounded-lg pl-10 pr-4 py-2 focus:ring-safety-orange focus:border-safety-orange w-64">
+</div>
+<button class="bg-safety-orange text-on-primary px-6 py-2 rounded font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary-container transition-all">
+                    Request Quote
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-12">
+<!-- Breadcrumbs -->
+<nav class="mb-8 flex items-center gap-2 text-steel-gray">
+<span class="font-label-caps text-label-caps">HOME</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="font-label-caps text-label-caps">MATERIALS</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="font-label-caps text-label-caps text-safety-orange">PLYWOOD &amp; WHITE WOOD</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Product Images Section -->
+<div class="lg:col-span-7 space-y-6">
+<div class="aspect-[4/3] bg-white border border-steel-gray relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-resolution, industrial-style studio photograph of premium structural plywood and white wood planks stacked neatly. The lighting is sharp and technical, highlighting the natural grain and smooth finish of the timber. The color palette is dominated by warm wood tones against a neutral, concrete-gray background, maintaining a professional and reliable construction supplier aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIsODaV6tK4pdUDugSIAScPjlZc7Nt2tOzRYmw_jQQPbgEAPoDtscp3vxvSGZ5qH22g_eJK6uLc2x-D4jvB_7oJjPB6EBiCm0udtSYyf1cpOvtJI9upbJRrlwNm_sM51Cf1mYC83aJ9rpua7kWsZR2a-olBTI73jKuvUOQSjnwyN8hmEn13PoH259IqC-POkksj-4FD5JzpJeUg9CRfKJXENdOeALlkBRr6nXfUykceRrxtxZ6bUIU">
+<div class="absolute top-4 left-4 bg-industrial-navy text-on-primary px-4 py-2 font-label-caps text-label-caps">
+                        CERTIFIED GRADE A
+                    </div>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square bg-white border border-safety-orange">
+<img class="w-full h-full object-cover" data-alt="A macro close-up of a plywood edge showing the clean, uniform layers of high-quality wood veneer. The lighting is precise, showcasing the durability and structural integrity of the material. Minimalist industrial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzS8yXC73T_nIZpY6j9O7SSsvidgnXmcJ3lMG4hS9NB4K4Kncdyv3eucgvWvWzubJHNC3AbelEDlDH7N26ISmoAWPVjunwrRpAhCAPOSBKpsVnvdNIus7uFN3VOfKyeRb0FLe9H1z5xJSQTCsv5Ss6omiDiiaN27G__99DGBUUNJlQQGzr0dXVHLxCxnYNElNbIV7-hNFIA3ggSbEi06x5FB6dtyfFWWCmijuqruNEP3XNvyGkLBbw">
+</div>
+<div class="aspect-square bg-white border border-steel-gray hover:border-safety-orange cursor-pointer transition-colors">
+<img class="w-full h-full object-cover" data-alt="A wide-angle shot of stacks of white wood planks in a clean, organized industrial warehouse. Soft overhead lighting creates a professional atmosphere of institutional strength and reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrh5snSrieCadIwVaQMYXAArfeyqR05t34Yd1uGM09A9H0QGUYT27kdufSEFg-JHTx8O1tx2sQy1g-Sn5GAFZ-IxQHpv5ECCdcCzrrteHxdVvOvisLLVmLUrLhSNnXfF0Dj4XS0AD77s-shwxJclgrFy2RzaS6b4dMQCY8rhCx2zLothVmIGrvK6xXXBbOAeSAdVLVUuVwcnU2EADZGQZVYQ9klhmitkkXZ95CYl3mPV2olGA_qsDe">
+</div>
+<div class="aspect-square bg-white border border-steel-gray hover:border-safety-orange cursor-pointer transition-colors">
+<img class="w-full h-full object-cover" data-alt="A detailed view of white wood grain texture, professionally lit to emphasize the quality and smoothness of the surface. Concrete-white aesthetic with industrial navy accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGQxKLNAMDzGszB4Dn-MUag3e4RrmQyb-1JDmpZ543DyezVrkqOuHa-sUPMlUN_KHRQa7Rk36PSP81FI-_ACslNzHwRAENzG3FvIq4VvFQYnd83HWi_WK-BawU3e1g3jA1EBX3VQ7-yHLo9uOshUQKSwwnWS0tLS6ATfeSOD6Ly4X5ZrX1IwCK-lYBds5JENSnhYCMZ3aM4ajau4kvkZhHdPLhS6MoeFWLGK3SfCTY-lU7Koh6S-0R">
+</div>
+<div class="aspect-square bg-white border border-steel-gray flex items-center justify-center industrial-texture text-on-primary">
+<span class="material-symbols-outlined text-4xl">play_circle</span>
+</div>
+</div>
+</div>
+<!-- Product Details Sidebar -->
+<div class="lg:col-span-5 space-y-8">
+<div>
+<span class="font-label-caps text-label-caps text-steel-gray tracking-widest mb-2 block uppercase">Structural Materials</span>
+<h1 class="font-headline-lg text-headline-lg text-industrial-navy leading-tight">Plywood &amp; White wood</h1>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex text-safety-orange">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-steel-gray">4.8 (124 Industrial Reviews)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Engineered for maximum durability and load-bearing capacity. Our premium plywood and white wood selections are sourced from sustainable forests and processed to meet rigorous ISO structural standards for commercial and residential construction projects.
+                </p>
+<!-- Bulk Pricing Grid -->
+<div class="bg-surface-container-low border border-steel-gray p-6">
+<h3 class="font-label-caps text-label-caps text-industrial-navy mb-4 border-b border-steel-gray pb-2 uppercase">Bulk Procurement Options</h3>
+<div class="grid grid-cols-3 gap-4 text-center">
+<div class="p-4 border border-steel-gray hover:border-safety-orange bg-white transition-all">
+<span class="block font-label-caps text-label-caps text-steel-gray">100+ UNITS</span>
+<span class="block font-headline-sm text-headline-sm text-industrial-navy">$24.50</span>
+<span class="block font-body-sm text-body-sm text-steel-gray mt-1">Per Sheet</span>
+</div>
+<div class="p-4 border border-safety-orange bg-white relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-safety-orange text-on-primary px-2 py-0.5 text-[10px] font-bold rounded">BEST VALUE</div>
+<span class="block font-label-caps text-label-caps text-steel-gray">500+ UNITS</span>
+<span class="block font-headline-sm text-headline-sm text-industrial-navy">$21.20</span>
+<span class="block font-body-sm text-body-sm text-steel-gray mt-1">Per Sheet</span>
+</div>
+<div class="p-4 border border-steel-gray hover:border-safety-orange bg-white transition-all">
+<span class="block font-label-caps text-label-caps text-steel-gray">1000+ UNITS</span>
+<span class="block font-headline-sm text-headline-sm text-industrial-navy">$18.90</span>
+<span class="block font-body-sm text-body-sm text-steel-gray mt-1">Per Sheet</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4">
+
+
+</div>
+<button class="w-full bg-safety-orange text-on-primary h-14 font-headline-sm text-headline-sm hover:brightness-110 transition-all flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">description</span>
+                        REQUEST QUOTE
+                    </button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3 text-steel-gray">
+<span class="material-symbols-outlined text-safety-orange">verified</span>
+<span class="font-body-sm text-body-sm">ISO Certified Quality</span>
+</div>
+<div class="flex items-center gap-3 text-steel-gray">
+<span class="material-symbols-outlined text-safety-orange">local_shipping</span>
+<span class="font-body-sm text-body-sm">Standard Site Delivery</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bento Grid Specs & Details -->
+<section class="mt-24">
+<div class="flex items-center justify-between mb-8 border-b border-steel-gray pb-4">
+<h2 class="font-headline-md text-headline-md text-industrial-navy">Technical Specifications</h2>
+<div class="flex gap-4">
+<button class="font-label-caps text-label-caps text-safety-orange border-b-2 border-safety-orange">OVERVIEW</button>
+<button class="font-label-caps text-label-caps text-steel-gray hover:text-industrial-navy transition-colors">DATA SHEET</button>
+<button class="font-label-caps text-label-caps text-steel-gray hover:text-industrial-navy transition-colors">LOGISTICS</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-6">
+<!-- Specs Table -->
+<div class="lg:col-span-8 bg-white border border-steel-gray overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead class="bg-industrial-navy text-on-primary">
+<tr>
+<th class="p-4 font-label-caps text-label-caps uppercase tracking-wider">Property</th>
+<th class="p-4 font-label-caps text-label-caps uppercase tracking-wider">Plywood (Commercial)</th>
+<th class="p-4 font-label-caps text-label-caps uppercase tracking-wider">White Wood (Premium)</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md">
+<tr class="border-b border-steel-gray hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-bold text-industrial-navy">Material Origin</td>
+<td class="p-4">Southeast Asian Hardwood</td>
+<td class="p-4">European Spruce/Pine</td>
+</tr>
+<tr class="bg-surface-container-low border-b border-steel-gray hover:bg-surface-container-high transition-colors">
+<td class="p-4 font-bold text-industrial-navy">Density (kg/m³)</td>
+<td class="p-4">580 - 650</td>
+<td class="p-4">420 - 470</td>
+</tr>
+<tr class="border-b border-steel-gray hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-bold text-industrial-navy">Moisture Content</td>
+<td class="p-4">8% - 12% (Kiln Dried)</td>
+<td class="p-4">15% - 18% (Air/Kiln)</td>
+</tr>
+<tr class="bg-surface-container-low border-b border-steel-gray hover:bg-surface-container-high transition-colors">
+<td class="p-4 font-bold text-industrial-navy">Standard Size</td>
+<td class="p-4">1220mm x 2440mm</td>
+<td class="p-4">Variable Lengths (3m - 6m)</td>
+</tr>
+<tr class="border-b border-steel-gray hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-bold text-industrial-navy">Thickness Options</td>
+<td class="p-4">3mm to 25mm</td>
+<td class="p-4">19mm to 100mm</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="p-4 font-bold text-industrial-navy">Adhesive Grade</td>
+<td class="p-4">WBP Melamine / Phenolic</td>
+<td class="p-4">N/A (Solid Timber)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Info Cards -->
+<div class="md:col-span-2 lg:col-span-4 grid grid-rows-2 gap-6">
+<div class="bg-industrial-navy p-8 text-on-primary flex flex-col justify-between border-t-4 border-safety-orange relative overflow-hidden group">
+
+<div class="relative z-10">
+<span class="material-symbols-outlined text-safety-orange text-4xl mb-4">architecture</span>
+<h4 class="font-headline-sm text-headline-sm mb-2">Structural Engineering</h4>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">Our white wood is precisely milled for optimal straightness and structural reliability in framing and scaffolding applications.</p>
+</div>
+<a class="relative z-10 mt-4 text-safety-orange font-label-caps text-label-caps flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                            DOWNLOAD BLUEPRINTS
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="bg-white border border-steel-gray p-8 flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-industrial-navy text-4xl mb-4">eco</span>
+<h4 class="font-headline-sm text-headline-sm text-industrial-navy mb-2">Eco-Certified Supply</h4>
+<p class="font-body-sm text-body-sm text-steel-gray leading-relaxed">Verified sustainable sourcing chain ensuring minimal environmental impact for LEED-certified projects.</p>
+</div>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="bg-surface-container text-industrial-navy px-2 py-1 text-[10px] font-bold uppercase">FSC Certified</span>
+<span class="bg-surface-container text-industrial-navy px-2 py-1 text-[10px] font-bold uppercase">PEFC</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Products Section -->
+<section class="mt-24 mb-12">
+<h2 class="font-headline-md text-headline-md text-industrial-navy mb-8">Complementary Project Assets</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-white border border-steel-gray hover:border-safety-orange transition-all group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="A focused shot of heavy-duty industrial fasteners and bolts organized in a steel tray. High contrast lighting, sharp detail, industrial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQwVYERpZ5a3F8SfnKbShfsqUOgqY6O4IY_QYmyX60RvIAsQaQTOOEK1YYyYDVILUE21oD4fK1stFuThbBIhjtaky9Gq3r0qIZDfjP5oBnApwh2zL6jJWSmAb_KLjPPVIb0GJuth-sO_9uW4yVKbPBbPgPRvsjJyyFrVjrTUQLBEC7A0aSWf90wk0qvbWJ_f6Tj56mR2lv661NmUCHJ3sb6tMwr1F0XgfXC2_cy1Cpnk288t9m_fqx">
+<div class="absolute bottom-0 left-0 right-0 bg-industrial-navy/90 p-2 text-center transform translate-y-full group-hover:translate-y-0 transition-transform">
+<span class="text-on-primary font-label-caps text-[10px] tracking-widest">QUICK VIEW</span>
+</div>
+</div>
+<div class="p-4">
+<h5 class="font-label-caps text-label-caps text-industrial-navy mb-1 uppercase">Structural Fasteners</h5>
+<p class="font-body-sm text-body-sm text-steel-gray">High-tensile Grade 8.8</p>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-headline-sm text-[18px] text-industrial-navy">$0.45 / unit</span>
+
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white border border-steel-gray hover:border-safety-orange transition-all group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Rolls of industrial-grade insulation material stacked in a clean warehouse environment. Cool-toned lighting, technical focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrZl3uBpqNDV05NI-Hw9_t52unzLGXae9i6BsiG-6QcrLw93j3vBxjO54xhSMyuAlebeUSUbxK37LHZGVoiF920lGG22AgvsGUhwajYPDNM0xo24buIIMNaBi91xCzwR2u48VnXKMcoOJt3u7zKMCXJ62uKNHCcJu9DuTl9S9ohwGHwLZ0THwQH7Xkvg9F4Rbfn_jOsIMjOU7l8ePnCTlivFq0HnTT4vMANhgkBEbqKRlXlUZLzlC4">
+</div>
+<div class="p-4">
+<h5 class="font-label-caps text-label-caps text-industrial-navy mb-1 uppercase">Vapor Barriers</h5>
+<p class="font-body-sm text-body-sm text-steel-gray">R-Value Enhanced</p>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-headline-sm text-[18px] text-industrial-navy">$85.00 / roll</span>
+
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white border border-steel-gray hover:border-safety-orange transition-all group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="High-quality industrial safety gear including helmets and gloves laid out on a blueprint. Industrial navy and safety orange accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNDaFrWGKGk1pJ01dQHK3I5odtcY35IgEQUblr7pqY3wwc9CKI9FOSXA8zoUO5y1CH5N1c9yfb09fj77CTcWYvrl9ZYXGbOlDnJ30Yy0L6dECk-ZhcaEEJWcjgcFda2LWdVdzC5--FNVlNvNlq6wlw-xmK5ZsPk83zdzjvB3GyWAW2ptbwJ5P3nQyB_KP-7QhruuToV0WQ4Trf494Xyl61oF6-WApY7qgD4r7RTneOStMIghDKfNvk">
+</div>
+<div class="p-4">
+<h5 class="font-label-caps text-label-caps text-industrial-navy mb-1 uppercase">Safety Helmets</h5>
+<p class="font-body-sm text-body-sm text-steel-gray">ANSI/ISEA Z89.1</p>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-headline-sm text-[18px] text-industrial-navy">$22.00 / unit</span>
+
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white border border-steel-gray hover:border-safety-orange transition-all group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Heavy steel rebar rods arranged in a pattern, highlighting their industrial texture and strength. Blueprint inspired lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH6La79XNN_cHKPz8Yz0diw6uSiwB3h34BaO-C7e2Qxid1ihcCa-iLh9TDIAxBrZmHfwmT0rEXInVCp9TAYfYQaqvgFGv8jRuYb2svGR-Pvj9s9AhgJ8e4NvYA4uA0UWfrkLopPvib_NC0Mzx0Zp0nJyKOKR_Ktza1_Nct9fE9YBH_1mxnnKPA89tJZH9g90cA8k8JO6D20NLfWSemmq_CB_gOuSMXOzQN57i1BOe8g9L1pmLTUTZv">
+</div>
+<div class="p-4">
+<h5 class="font-label-caps text-label-caps text-industrial-navy mb-1 uppercase">Steel Rebar</h5>
+<p class="font-body-sm text-body-sm text-steel-gray">Grade 60 Structural</p>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-headline-sm text-[18px] text-industrial-navy">$1,250 / ton</span>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-industrial-navy dark:bg-industrial-navy w-full mt-auto border-t border-steel-gray">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-sm text-headline-sm font-bold text-safety-orange">Qtrix Global</div>
+<p class="font-body-sm text-body-sm text-on-primary max-w-xs">
+                    The premium anchor for structural materials and industrial solutions. Delivering precision engineering to the global construction frontline.
+                </p>
+<div class="flex gap-4">
+<a class="text-on-primary hover:text-safety-orange transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="text-on-primary hover:text-safety-orange transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+<a class="text-on-primary hover:text-safety-orange transition-colors" href="#">
+<span class="material-symbols-outlined">call</span>
+</a>
+</div>
+</div>
+<div class="space-y-4">
+<h6 class="font-label-caps text-label-caps text-safety-orange uppercase tracking-widest">Solutions</h6>
+<ul class="space-y-2">
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Steel Rebar</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Concrete Mix</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Structural Wood</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Safety Gear</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h6 class="font-label-caps text-label-caps text-safety-orange uppercase tracking-widest">Company</h6>
+<ul class="space-y-2">
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">About Our Mission</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Project Portfolio</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Careers</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h6 class="font-label-caps text-label-caps text-safety-orange uppercase tracking-widest">Compliance</h6>
+<ul class="space-y-2">
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Terms of Service</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Privacy Policy</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Certification Logs</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop py-6 border-t border-steel-gray max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-sm text-body-sm text-steel-gray text-center md:text-left">© 2024 Qtrix Global. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="font-label-caps text-[10px] text-steel-gray flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">public</span> GLOBAL LOGISTICS READY
+                </span>
+<span class="font-label-caps text-[10px] text-steel-gray flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">shield</span> SECURE DATA ENCRYPTION
+                </span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for Quantity Selector focus state
+        const qtyInput = document.querySelector('input[type="number"]');
+        qtyInput?.addEventListener('focus', () => {
+            qtyInput.parentElement.classList.add('border-safety-orange');
+            qtyInput.parentElement.classList.remove('border-steel-gray');
+        });
+        qtyInput?.addEventListener('blur', () => {
+            qtyInput.parentElement.classList.add('border-steel-gray');
+            qtyInput.parentElement.classList.remove('border-safety-orange');
+        });
+
+        // Toggle sticky nav shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+
+</body></html>

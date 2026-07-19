@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Safety Gear - Qtrix Global</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "safety-orange": "#F97316",
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#2c3134",
+                "surface-container-high": "#e4e9ed",
+                "on-secondary-fixed-variant": "#783200",
+                "secondary": "#9d4300",
+                "on-primary-fixed": "#131b2e",
+                "surface-container-highest": "#dfe3e7",
+                "inverse-primary": "#bec6e0",
+                "industrial-navy": "#0F172A",
+                "on-surface": "#171c1f",
+                "inverse-on-surface": "#edf1f5",
+                "steel-gray": "#64748B",
+                "on-primary": "#ffffff",
+                "primary-fixed": "#dae2fd",
+                "on-error-container": "#93000a",
+                "on-secondary-container": "#5c2400",
+                "on-secondary": "#ffffff",
+                "primary": "#000000",
+                "on-tertiary-fixed-variant": "#3a485c",
+                "tertiary-fixed": "#d5e3fd",
+                "surface-container-low": "#f0f4f8",
+                "tertiary-fixed-dim": "#b9c7e0",
+                "on-error": "#ffffff",
+                "on-background": "#171c1f",
+                "concrete-white": "#F8FAFC",
+                "on-tertiary-container": "#76859b",
+                "background": "#f6fafe",
+                "surface": "#f6fafe",
+                "error-container": "#ffdad6",
+                "on-tertiary-fixed": "#0d1c2f",
+                "surface-bright": "#f6fafe",
+                "surface-dim": "#d6dade",
+                "secondary-container": "#fd761a",
+                "outline-variant": "#c6c6cd",
+                "on-primary-fixed-variant": "#3f465c",
+                "tertiary": "#000000",
+                "primary-container": "#131b2e",
+                "secondary-fixed-dim": "#ffb690",
+                "primary-fixed-dim": "#bec6e0",
+                "surface-container": "#eaeef2",
+                "secondary-fixed": "#ffdbca",
+                "surface-container-lowest": "#ffffff",
+                "surface-tint": "#565e74",
+                "on-surface-variant": "#45464d",
+                "tertiary-container": "#0d1c2f",
+                "error": "#ba1a1a",
+                "surface-variant": "#dfe3e7",
+                "outline": "#76777d",
+                "on-primary-container": "#7c839b",
+                "on-secondary-fixed": "#341100"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "container-max": "1280px",
+                "margin-mobile": "16px",
+                "margin-desktop": "64px",
+                "gutter": "24px",
+                "unit": "4px"
+            },
+            "fontFamily": {
+                "headline-md": ["Hanken Grotesk"],
+                "display-lg": ["Hanken Grotesk"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-sm": ["Inter"],
+                "body-md": ["Inter"],
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "headline-sm": ["Hanken Grotesk"],
+                "label-caps": ["Inter"],
+                "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .technical-border {
+            border: 1px solid #64748B;
+        }
+        .active-thumb {
+            border: 2px solid #F97316 !important;
+        }
+    </style>
+</head>
+<body class="bg-concrete-white text-on-surface font-body-md antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-industrial-navy dark:bg-industrial-navy w-full top-0 sticky border-b border-steel-gray z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-headline-sm text-headline-sm font-bold text-safety-orange">Qtrix Global</span>
+<div class="hidden md:flex gap-6">
+<a class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors" href="#">Products</a>
+<a class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-white/10 px-3 py-1.5 rounded-lg border border-white/20">
+<span class="material-symbols-outlined text-on-primary mr-2" style="font-size: 20px;">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-white placeholder-white/50 text-sm w-48" placeholder="Search safety gear..." type="text"/>
+</div>
+<button class="bg-safety-orange text-on-primary px-6 py-2 rounded font-label-caps text-label-caps font-bold hover:opacity-90 transition-opacity">Request Quote</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 w-full">
+<!-- Breadcrumbs -->
+<nav class="mb-8 flex items-center gap-2 text-steel-gray font-label-caps text-label-caps">
+<a class="hover:text-industrial-navy" href="#">Home</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<a class="hover:text-industrial-navy" href="#">Products</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-industrial-navy">Safety Gear</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Gallery Section -->
+<div class="lg:col-span-7">
+<div class="bg-white p-4 technical-border rounded-lg mb-4 relative group">
+<img class="w-full h-[500px] object-contain" data-alt="A professional studio product photograph of heavy-duty construction safety boots featuring reinforced steel toes and slip-resistant soles. The lighting is crisp and high-contrast, highlighting the durable leather texture and rugged tread. The background is a clean, neutral grey concrete, maintaining a modern industrial aesthetic. The focus is sharp, emphasizing the high-quality craftsmanship of the industrial footwear." id="main-product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaxNfyJ8IVNvjcQJUXeeLsGwTrYnFpzM-uhybKJrebgvZ2220yxewXZoaBsfJEDDNC3vO6ITJd8rZFBjMJwuOl4BYHaZVlmbzMkO6x81ho4FsMd3YipfnVFjYl0NkZ79krzI5iJMevuemMYa9GpHOKHTDIsyAhXo5g5vtqCiL6u-0NeAmxkWBuRvUFIZGFQTAnH_lNvgOzPRRIdlovuHube2WKcbGsJfrBqKvhn268oXX0D6EdfJD-"/>
+<div class="absolute top-4 left-4 bg-industrial-navy text-white px-3 py-1 font-label-caps text-[10px] tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        ISO 20345 CERTIFIED
+                    </div>
+</div>
+<div class="grid grid-cols-5 gap-4">
+<button class="bg-white p-2 technical-border rounded cursor-pointer active-thumb thumb-btn" onclick="updateImage(0)">
+<img class="w-full h-20 object-contain" data-alt="A macro close-up of a high-performance safety shoe showing the heavy-duty stitching and industrial-grade lace eyelets. The leather is premium grain with a matte finish, reflecting an institutional strength. The lighting creates subtle shadows to emphasize the durability of the construction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6GsHoeuI99uVfRyC6Ru0OzQkR2jY1PwIcHLGzHRlPSD8f5OnbZwlUZMrxHA3u03PyIt7SVOHvyIUOYnBtZa77l0ln5Uniok5gq7VJYk68Cm3ctX8JMfrjN1rkIy4KQqQtxCTmI4wRyfmdwtj_jpjJM-Czl16B4xlNGleNMj1YO61ksTiKQ5rTJbqjccRmw4myumgF7LqXVj7fFLxowp5HdUqHj6EkN0IvzH1kp7_3LCGdO5mxajsG"/>
+</button>
+<button class="bg-white p-2 technical-border rounded cursor-pointer thumb-btn" onclick="updateImage(1)">
+<img class="w-full h-20 object-contain" data-alt="A professional side-view shot of a modern industrial safety helmet in bright high-visibility orange. The helmet includes integrated eye protection and hearing muff attachments. It is set against a clean white background with minimal soft shadows, evoking a sense of modern engineering and protection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgnaiDELBUKL2KpZCPMBUTkOz-pE7wWweXZWjbkmZ7bugzGetOoTDY06p88AGnqDq2AjCj8yd9WO11CoH1Jnsj47IZStPxobsG_nvqTbUGDSdW0hELN02pOgcTr1YzJ8-9Sh4HmUHvw2SrVGujQzGin5ieBLhgQhBam_B8fpqlKO24hgDDgRkMwE4ocdzCL6fETfQJ1XiejjmBDS4r-QdG4MwbtKZkZybY8IMgzIdnO8m9tl-Cbso7"/>
+</button>
+<button class="bg-white p-2 technical-border rounded cursor-pointer thumb-btn" onclick="updateImage(2)">
+<img class="w-full h-20 object-contain" data-alt="A full-length product image of a heavy-duty navy blue industrial coverall with reflective safety strips. The garment is shown on a minimalist mannequin, highlighting the reinforced knees and multiple utility pockets. The lighting is even and technical, showcasing the fabric durability and functional design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWxB__GBDXpWfaiy_yoy49K553kZ3BO7Y14n3Y4KrXTz3rpHWWQiwCI2ayvI_Yzooe99oN125DeTYi8WHY_Gu0ui6XAWiWNfW-UBie3fcfv9BkZzadSZZprbsBptCJwpfrQGxszuCvhQhMqKBbHqUW-dXphrsKzwo2Vvnmq2gkV4yDQMSqJNMrIim7gpZJMhGe0i4lKzjyREpsZXlq6zXOKeN3MyiVDgjnbNIfrFoeux-LyQ4dDZmc"/>
+</button>
+<button class="bg-white p-2 technical-border rounded cursor-pointer thumb-btn" onclick="updateImage(3)">
+<img class="w-full h-20 object-contain" data-alt="A close-up of high-visibility protective safety jackets with silver reflective banding. The fabric is a bright neon yellow mesh, designed for maximum visibility in low-light construction environments. The style is professional and minimalist, with a focus on safety and utility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAl1qC7d-ptaIXSjQnHhXkVMFMVH-gvwa-Pu1C_Crv0BPfqQcxOGo-faIfV72ioMici-E6pIWHV8wDRvyPuOquM7vWt_TlQEAAxXcKq2g4sBu6VSWRW6gHp6i-2iAsmhPhDPHd0FSecEyGABs6oNzovAifnNHnyjqFbj131OGDDqJTFJa2qXS-ekRiRmr1bEw3RQb59zAp6afYXOvw6qM2pyMZkfi2uEtKe_c0T4648ydBxEWEcd5H"/>
+</button>
+<button class="bg-white p-2 technical-border rounded flex flex-col items-center justify-center text-steel-gray hover:text-safety-orange transition-colors">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="font-label-caps text-[10px] mt-1">VIDEO</span>
+</button>
+</div>
+</div>
+<!-- Content Section -->
+<div class="lg:col-span-5 flex flex-col">
+<h1 class="font-headline-lg text-headline-lg text-industrial-navy mb-2">Industrial Protection Series V2</h1>
+<p class="text-steel-gray font-label-caps text-label-caps mb-6">SKU: QT-SF-2024-XP</p>
+<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center text-safety-orange">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-steel-gray font-body-sm text-body-sm">(128 Verified Project Manager Reviews)</span>
+</div>
+<div class="mb-8 p-6 bg-white technical-border rounded-lg border-l-4 border-l-safety-orange">
+<p class="font-body-md text-body-md text-industrial-navy leading-relaxed mb-4">
+                        Engineered for the most demanding construction environments, our V2 Series safety gear integrates advanced polymer protection with ergonomic comfort. Compliant with international standards ISO 20345 and ANSI Z89.1.
+                    </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-industrial-navy text-white px-3 py-1 font-label-caps text-[10px] rounded">WATERPROOF</span>
+<span class="bg-industrial-navy text-white px-3 py-1 font-label-caps text-[10px] rounded">OIL RESISTANT</span>
+<span class="bg-industrial-navy text-white px-3 py-1 font-label-caps text-[10px] rounded">STEEL TOE</span>
+</div>
+</div>
+<div class="space-y-6 mb-8">
+<div>
+<label class="font-label-caps text-label-caps text-industrial-navy mb-2 block">GEAR CATEGORY</label>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-white technical-border p-3 flex items-center justify-center gap-2 hover:bg-surface-container transition-all text-industrial-navy font-bold text-sm">
+<span class="material-symbols-outlined">engineering</span>
+                                PROTECTIVE SHOES
+                            </button>
+<button class="bg-white border-2 border-safety-orange p-3 flex items-center justify-center gap-2 transition-all text-safety-orange font-bold text-sm">
+<span class="material-symbols-outlined">health_and_safety</span>
+                                SAFETY HELMETS
+                            </button>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-industrial-navy mb-2 block">QUANTITY (BULK DISCOUNTS APPLY)</label>
+<div class="flex items-center gap-4">
+<div class="flex items-center technical-border bg-white rounded">
+<button class="px-4 py-2 hover:bg-gray-100">-</button>
+<input class="w-16 text-center border-none focus:ring-0 font-bold" type="number" value="12"/>
+<button class="px-4 py-2 hover:bg-gray-100">+</button>
+</div>
+<span class="text-steel-gray font-body-sm">Lead time: 3-5 Business Days</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4 mt-auto">
+<button class="flex-1 bg-safety-orange text-white py-4 font-label-caps text-label-caps font-extrabold hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">request_quote</span>
+                        REQUEST BULK QUOTE
+                    </button>
+<button class="w-16 technical-border flex items-center justify-center hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-industrial-navy">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Technical Specification Section -->
+<section class="mt-24">
+<div class="border-b-2 border-industrial-navy mb-8 flex gap-12">
+<button class="font-label-caps text-label-caps py-4 border-b-4 border-safety-orange text-industrial-navy">TECHNICAL SPECIFICATIONS</button>
+<button class="font-label-caps text-label-caps py-4 text-steel-gray hover:text-industrial-navy transition-colors">COMPLIANCE CERTIFICATES</button>
+<button class="font-label-caps text-label-caps py-4 text-steel-gray hover:text-industrial-navy transition-colors">SHIPPING &amp; LOGISTICS</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-industrial-navy mb-6">Performance Matrix</h3>
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-industrial-navy text-white">
+<th class="p-4 font-label-caps text-label-caps">PARAMETER</th>
+<th class="p-4 font-label-caps text-label-caps">RATING / VALUE</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-steel-gray/20">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-bold text-industrial-navy">Impact Resistance</td>
+<td class="p-4 text-steel-gray">200 Joules (Toe Protection)</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors bg-concrete-white">
+<td class="p-4 font-bold text-industrial-navy">Thermal Insulation</td>
+<td class="p-4 text-steel-gray">Cold up to -20°C / Heat up to 300°C</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-bold text-industrial-navy">Chemical Resistance</td>
+<td class="p-4 text-steel-gray">Acid, Alkali, and Hydrocarbon resistant</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors bg-concrete-white">
+<td class="p-4 font-bold text-industrial-navy">Material Density</td>
+<td class="p-4 text-steel-gray">High-density Polyurethane (Sole)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex flex-col justify-center">
+<div class="bg-industrial-navy p-8 text-white rounded-lg relative overflow-hidden">
+
+<div class="relative z-10">
+<h4 class="font-headline-sm text-headline-sm text-safety-orange mb-4">Adhesive Tech Compatibility</h4>
+<p class="font-body-md text-body-md mb-6 text-on-primary-container">
+                                Our safety gear is tested against spillages of industrial adhesives like the <strong>Bostik High Tack H785</strong>. The special coating ensures easy cleaning and no material degradation.
+                            </p>
+<div class="flex items-center gap-4 bg-white/10 p-4 rounded border border-white/20">
+<img alt="Product Compatibility" class="w-12 h-12 object-contain bg-white rounded p-1" src="https://lh3.googleusercontent.com/aida/AP1WRLscSszLCLfoUdcPnNQyxFZqk_O0YzJVHoj-q9mlDkKBGKq_IZthw3XQ2EE_JQOewmtAfj2UsoVETsZE877tQ1fpHFUKMrnEoqM62zhZtA5e-q2a-sNtp44pmD_kb4_3KQeR7Op0PZOHMnBL55xweELXY4gw4I5EMgBsZU-gfMz-8E7zbRQCOjyThk3kb3SM_bO-nIE-3hP9NxPwMgCgZ6tl-0jjHKntGE6L6hgxnZ8uC6MjQjmF-1uHKA"/>
+<div>
+<p class="font-label-caps text-[10px] text-safety-orange">TESTED COMPONENT</p>
+<p class="font-bold text-sm">Bostik H785 Resistant Sole Coating</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Recommended Gear -->
+<section class="mt-24">
+<h2 class="font-headline-md text-headline-md text-industrial-navy mb-8">Related Safety Ecosystem</h2>
+<div class="bento-grid">
+<!-- Large Item -->
+<div class="col-span-12 md:col-span-8 bg-white technical-border p-8 rounded-lg group hover:border-safety-orange transition-all relative">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<span class="text-safety-orange font-label-caps text-label-caps mb-2 block">NEW RELEASE</span>
+<h3 class="font-headline-sm text-headline-sm text-industrial-navy mb-4">Full-Body Harness Pro</h3>
+<p class="text-steel-gray mb-6">Designed for high-altitude structural work. Features zero-gravity suspension technology.</p>
+<button class="bg-industrial-navy text-white px-8 py-3 font-label-caps text-label-caps hover:bg-safety-orange transition-all">VIEW GEAR</button>
+</div>
+<div class="w-full md:w-64 h-64 bg-concrete-white rounded overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A detailed product shot of a black and neon green fall protection harness for construction workers. The harness is displayed on a mannequin and features heavy-duty alloy steel D-rings and breathable padding. The image uses high-key industrial lighting to emphasize the security and high-tech nature of the safety equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfnVdt0IezyHrA8UOy2XYtjb4yCFvrXYd273kUuV0Kkxclg1zU6ByWn6Z8taYCtge-ojw34LufUAG8Z3oofi75A7T_46BSLR2YxWADM02y_c6XAV1mXDU-2RgRbqoKLoaXkXagUuYmjfsTXojNr9TsH7ntKL3MQRWfQ25GDQgF_IB5trb_GcHc3_1zdlRTZkWuPGaJBmSYSWDxFTtU9wrcIymOOPokIjore47QNARNfXerU4DB8gb3"/>
+</div>
+</div>
+</div>
+<!-- Small Item 1 -->
+<div class="col-span-12 md:col-span-4 bg-industrial-navy p-6 rounded-lg text-white flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-safety-orange text-4xl mb-4">visibility</span>
+<h3 class="font-headline-sm text-headline-sm mb-2">Eye Protection</h3>
+<p class="text-steel-gray text-sm">Anti-fog, scratch-resistant polycarbonate lenses.</p>
+</div>
+<a class="mt-8 flex items-center gap-2 text-safety-orange font-label-caps text-label-caps" href="#">
+                        EXPLORE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Small Item 2 -->
+<div class="col-span-12 md:col-span-4 bg-white technical-border p-6 rounded-lg group hover:bg-surface-container-low transition-all">
+<img class="w-full h-40 object-contain mb-4" data-alt="A pair of heavy-duty leather welding gloves with reinforced palms and extended cuffs. The gloves are rugged and shown in a workspace environment with industrial tools blurred in the background. The aesthetic is gritty but professional, focusing on the protection provided by the material." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-4YToM74Is1H46cyaHS-93OGJFOggNlU5ZNuAnN727B-0ChfgDgRMIoFUA75Ydu1eOI2I0DekrtXFa90TUg5edlkmEwR9stTu6z2q1YE25-tDZy5ktEylp6x5mxHBWMz8oAvHMQLo3ETixl7y4oxUr6QtijFH-J84QzkTlQWhENVgxiUkxzgdlI2h2Yviyj6eWRBUjbMZKUjEGHFtG-A7CUxp6Z4siR-KGopLzXRfUhOxsuYH56XV"/>
+<h3 class="font-bold text-industrial-navy">Therma-Grip Gloves</h3>
+<p class="text-steel-gray text-sm">Heat resistant up to 500°C.</p>
+</div>
+<!-- Small Item 3 -->
+<div class="col-span-12 md:col-span-4 bg-white technical-border p-6 rounded-lg group hover:bg-surface-container-low transition-all">
+<img class="w-full h-40 object-contain mb-4" data-alt="Professional noise-cancelling ear muffs in industrial blue and black. The device is shown in a clean, sharp studio setting with a spotlight highlighting the comfortable ear cushions and sturdy headband. The design is modern and minimalist, conveying reliability and effective protection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ25vPgOIypn0m-c_acUePHJsM0pYGZAHDTau-rKhBKmrRm8iGDCYm-qIS-H3TzZC2QJDCRPz3Xby6SPhJnlYvO8Tb4UzEoT9pMurOpoWMXrJqE9_QzGOMxlIsXewU5IQU7IjDmsgA94t4sbEjJ3yAFQeiyjO-msWUx6ox9A4Th2rGGsnC17gb4c87t4PLFbICt3kRcRJGn8Ir4Enf2eEViwTETxRAZvLygd9SjisJlQKnKl0DH910"/>
+<h3 class="font-bold text-industrial-navy">Acoustic Shield Pro</h3>
+<p class="text-steel-gray text-sm">NRR 32dB High Protection.</p>
+</div>
+<!-- Small Item 4 -->
+<div class="col-span-12 md:col-span-4 bg-safety-orange p-6 rounded-lg text-white flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-5xl mb-2">download</span>
+<h3 class="font-headline-sm text-headline-sm">Safety Catalog</h3>
+<p class="text-xs mt-2 opacity-80 uppercase tracking-widest">Download PDF (24MB)</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-industrial-navy dark:bg-industrial-navy w-full mt-auto border-t border-steel-gray">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm font-bold text-safety-orange">Qtrix Global</span>
+<p class="text-steel-gray font-body-sm text-body-sm">Supplying the foundations of the modern world since 1998. Durable. Reliable. Engineering-led.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-primary mb-6">PRODUCTS</h4>
+<ul class="space-y-3">
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Steel Rebar</a></li>
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Concrete Mix</a></li>
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Safety Gear</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-primary mb-6">COMPANY</h4>
+<ul class="space-y-3">
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">About Us</a></li>
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Contact</a></li>
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-primary mb-6">CERTIFICATIONS</h4>
+<div class="flex flex-wrap gap-4 opacity-50">
+<span class="material-symbols-outlined text-white" style="font-size: 32px;">verified</span>
+<span class="material-symbols-outlined text-white" style="font-size: 32px;">shield_with_heart</span>
+<span class="material-symbols-outlined text-white" style="font-size: 32px;">eco</span>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-6 border-t border-white/5 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-body-sm text-body-sm text-steel-gray">© 2024 Qtrix Global. All rights reserved.</span>
+<div class="flex gap-6">
+<a class="text-steel-gray hover:text-safety-orange transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-steel-gray hover:text-safety-orange transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-steel-gray hover:text-safety-orange transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+</footer>
+<script>
+        const thumbnails = [
+            "A professional studio product photograph of heavy-duty construction safety boots featuring reinforced steel toes and slip-resistant soles. The lighting is crisp and high-contrast, highlighting the durable leather texture and rugged tread. The background is a clean, neutral grey concrete, maintaining a modern industrial aesthetic. The focus is sharp, emphasizing the high-quality craftsmanship of the industrial footwear.",
+            "A professional side-view shot of a modern industrial safety helmet in bright high-visibility orange. The helmet includes integrated eye protection and hearing muff attachments. It is set against a clean white background with minimal soft shadows, evoking a sense of modern engineering and protection.",
+            "A full-length product image of a heavy-duty navy blue industrial coverall with reflective safety strips. The garment is shown on a minimalist mannequin, highlighting the reinforced knees and multiple utility pockets. The lighting is even and technical, showcasing the fabric durability and functional design.",
+            "A close-up of high-visibility protective safety jackets with silver reflective banding. The fabric is a bright neon yellow mesh, designed for maximum visibility in low-light construction environments. The style is professional and minimalist, with a focus on safety and utility."
+        ];
+
+        function updateImage(index) {
+            const mainImg = document.getElementById('main-product-image');
+            const btns = document.querySelectorAll('.thumb-btn');
+            
+            // Update Main Image Alt
+            mainImg.setAttribute('data-alt', thumbnails[index]);
+            
+            // Add a small fade effect simulation
+            mainImg.style.opacity = '0.5';
+            setTimeout(() => {
+                mainImg.style.opacity = '1';
+            }, 100);
+
+            // Update Active State
+            btns.forEach((btn, i) => {
+                if(i === index) btn.classList.add('active-thumb');
+                else btn.classList.remove('active-thumb');
+            });
+        }
+    </script>
+</body></html>

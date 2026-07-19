@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "safety-orange": "#F97316",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2c3134",
+                    "surface-container-high": "#e4e9ed",
+                    "on-secondary-fixed-variant": "#783200",
+                    "secondary": "#9d4300",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-container-highest": "#dfe3e7",
+                    "inverse-primary": "#bec6e0",
+                    "industrial-navy": "#0F172A",
+                    "on-surface": "#171c1f",
+                    "inverse-on-surface": "#edf1f5",
+                    "steel-gray": "#64748B",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#5c2400",
+                    "on-secondary": "#ffffff",
+                    "primary": "#000000",
+                    "on-tertiary-fixed-variant": "#3a485c",
+                    "tertiary-fixed": "#d5e3fd",
+                    "surface-container-low": "#f0f4f8",
+                    "tertiary-fixed-dim": "#b9c7e0",
+                    "on-error": "#ffffff",
+                    "on-background": "#171c1f",
+                    "concrete-white": "#F8FAFC",
+                    "on-tertiary-container": "#76859b",
+                    "background": "#f6fafe",
+                    "surface": "#f6fafe",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#0d1c2f",
+                    "surface-bright": "#f6fafe",
+                    "surface-dim": "#d6dade",
+                    "secondary-container": "#fd761a",
+                    "outline-variant": "#c6c6cd",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "tertiary": "#000000",
+                    "primary-container": "#131b2e",
+                    "secondary-fixed-dim": "#ffb690",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-container": "#eaeef2",
+                    "secondary-fixed": "#ffdbca",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#565e74",
+                    "on-surface-variant": "#45464d",
+                    "tertiary-container": "#0d1c2f",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#dfe3e7",
+                    "outline": "#76777d",
+                    "on-primary-container": "#7c839b",
+                    "on-secondary-fixed": "#341100"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "label-caps": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-concrete-white text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-industrial-navy border-b border-steel-gray">
+<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-headline-sm text-headline-sm font-bold text-safety-orange">Qtrix Global</span>
+<div class="hidden md:flex gap-6">
+<a href="#" class="font-body-md text-body-md text-safety-orange border-b-2 border-safety-orange pb-1">Products</a>
+<a href="#" class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors">Home</a>
+<a href="#" class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors">About Us</a>
+<a href="#" class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-steel-gray">search</span>
+<input type="text" placeholder="Search catalog..." class="bg-industrial-navy border border-steel-gray text-on-primary pl-10 pr-4 py-2 text-body-sm w-64 focus:border-safety-orange focus:ring-0">
+</div>
+<button class="bg-safety-orange text-white px-6 py-2 font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary-container transition-all">Request Quote</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Product Hero Section -->
+<section class="relative bg-industrial-navy py-16 lg:py-24 overflow-hidden">
+<div class="absolute inset-0 opacity-20 technical-grid"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div>
+<span class="inline-block bg-safety-orange text-white px-3 py-1 font-label-caps text-label-caps mb-6">ISO 9001 CERTIFIED PROTECTION</span>
+<h1 class="font-headline-lg text-headline-lg text-on-primary mb-6">Membranes &amp; Sheets: Advanced Waterproofing</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-xl mb-8">
+                        Engineered Polythene and Bitumen solutions designed for structural integrity. Our heavy-duty barriers provide absolute protection against moisture ingress, chemical exposure, and gas permeation in high-demand industrial environments.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2 bg-primary-container px-4 py-3 border border-steel-gray/30">
+<span class="material-symbols-outlined text-safety-orange">shield</span>
+<span class="text-on-primary font-label-caps text-label-caps">High Durability</span>
+</div>
+<div class="flex items-center gap-2 bg-primary-container px-4 py-3 border border-steel-gray/30">
+<span class="material-symbols-outlined text-safety-orange">water_drop</span>
+<span class="text-on-primary font-label-caps text-label-caps">100% Impermeable</span>
+</div>
+</div>
+</div>
+<div class="relative aspect-video rounded-sm overflow-hidden border border-steel-gray group">
+<img src="https://lh3.googleusercontent.com/aida/AP1WRLssNeOmXuc27gFy7SA_BXeYHcWbbJFI27Wr3dm5K7TDPN8vq-iZXVgBXW-NdN-ET2MLT2RPoF1o0cz68RXqoL1Y_jqx0VqQhs3RiV1m86eeONIfRXiesbb96Wl_CypdQL5yLCAGKPuqvjQZ7EE2Rz21nn5YieNJ7Po6e64hwyNTa-E19Ip-LpW0ZFOH06coD2PONKBFYat9GMD5czPHhO7cQzYNkqyRjKfoHkR9Gmkj0fqD2vz-1hmqUtg" alt="Industrial waterproofing application" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+<div class="absolute inset-0 bg-gradient-to-t from-industrial-navy/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="bg-industrial-navy/80 backdrop-blur text-on-primary text-[10px] px-2 py-1 font-mono uppercase">Reference: BIT-PRO-440</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Bento Grid -->
+<section class="py-20 bg-concrete-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-md text-headline-md text-industrial-navy mb-4">Structural Performance Data</h2>
+<p class="font-body-md text-body-md text-steel-gray">Precision-engineered for the most rigorous site conditions. Select from our specialized material composites based on your project requirements.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-steel-gray hover:border-safety-orange transition-colors"><span class="material-symbols-outlined">download</span></button>
+<button class="p-2 border border-steel-gray hover:border-safety-orange transition-colors"><span class="material-symbols-outlined">print</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Material-->
+<div class="md:col-span-2 lg:col-span-2 bg-white border border-steel-gray/20 p-8 flex flex-col justify-between hover:border-safety-orange transition-all">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-industrial-navy mb-4">Polyethylene (HDPE) Damp Proofing</h3>
+<p class="font-body-md text-body-md text-steel-gray mb-6">Our high-density polyethylene membranes feature a multi-layered structure with reinforced fibers for superior tear resistance and dimensional stability.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-steel-gray/10 pt-6">
+<div>
+<span class="font-label-caps text-[10px] text-steel-gray block mb-1">THICKNESS</span>
+<span class="font-headline-sm text-headline-sm text-industrial-navy">1200 Gauge</span>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-steel-gray block mb-1">TENSILE STRENGTH</span>
+<span class="font-headline-sm text-headline-sm text-industrial-navy">450 N/50mm</span>
+</div>
+</div>
+</div>
+<!-- Bitumen Overlay Card -->
+<div class="bg-industrial-navy p-8 flex flex-col justify-center items-center text-center group">
+<span class="material-symbols-outlined text-safety-orange text-5xl mb-6 group-hover:scale-110 transition-transform">construction</span>
+<h3 class="font-headline-sm text-headline-sm text-on-primary mb-2">Bitumen Torch-on</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container">Elastomeric modified bitumen for roof and foundation waterproofing.</p>
+<button class="mt-6 text-safety-orange font-label-caps text-label-caps border-b border-safety-orange pb-1 hover:text-on-primary hover:border-on-primary transition-all">VIEW SPECS</button>
+</div>
+<!-- Certification-->
+<div class="bg-white border border-steel-gray/20 p-8 flex flex-col items-center justify-center text-center">
+<img class="w-24 h-24 mb-6 opacity-80" data-alt="A professional architectural certification seal in high contrast black and white against a clean industrial white background, symbolizing structural engineering excellence and safety standards compliance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5RpDPlyuMBnk4cHW1ydG53EP89hkhPavPWUSuBVnnShJuuRYNP8IkHtERdYIx52h7vEwvjqiDnL-DG95aN_DVehkiEAD3yenV1duKmZ8C_vz4f3rO-Mv-IOZ9HC5LhvdHwnuV4Ite5yo-sQ0g6KNf1-vD8GrHw4EDknDVaGkTKPda0hJnz2SzrN2vh8AaJygi1byjZ0H_c82EW6jC7hclCnDvGscWHrsB5H_u83EmuwNVQNgTbMok">
+<span class="font-label-caps text-label-caps text-industrial-navy">BBA APPROVED</span>
+<p class="font-body-sm text-body-sm text-steel-gray mt-2">Certified for use in commercial grade builds.</p>
+</div>
+<!-- Dynamic Spec Table -->
+<div class="md:col-span-3 lg:col-span-4 mt-8 bg-white border border-steel-gray/20 overflow-hidden">
+<div class="bg-industrial-navy px-6 py-4">
+<h3 class="text-on-primary font-label-caps text-label-caps tracking-widest uppercase">Comparative Technical Analysis</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-steel-gray/20 bg-surface-container-low">
+<th class="px-6 py-4 font-label-caps text-label-caps text-industrial-navy">Property</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-industrial-navy">Polythene Sheet</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-industrial-navy">Bitumen Membrane</th>
+<th class="px-6 py-4 font-label-caps text-label-caps text-industrial-navy">Standards</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-steel-gray/10">
+<tr class="hover:bg-concrete-white">
+<td class="px-6 py-4 font-body-md text-industrial-navy font-bold">Moisture Vapor Trans.</td>
+<td class="px-6 py-4 font-body-md text-steel-gray">&lt; 0.1 g/m²/24h</td>
+<td class="px-6 py-4 font-body-md text-steel-gray">&lt; 0.05 g/m²/24h</td>
+<td class="px-6 py-4 font-body-sm italic text-steel-gray">EN 1931</td>
+</tr>
+<tr class="bg-concrete-white/50 hover:bg-concrete-white">
+<td class="px-6 py-4 font-body-md text-industrial-navy font-bold">Temperature Range</td>
+<td class="px-6 py-4 font-body-md text-steel-gray">-20°C to +40°C</td>
+<td class="px-6 py-4 font-body-md text-steel-gray">-15°C to +110°C</td>
+<td class="px-6 py-4 font-body-sm italic text-steel-gray">ISO 11357</td>
+</tr>
+<tr class="hover:bg-concrete-white">
+<td class="px-6 py-4 font-body-md text-industrial-navy font-bold">Impact Resistance</td>
+<td class="px-6 py-4 font-body-md text-steel-gray">High</td>
+<td class="px-6 py-4 font-body-md text-safety-orange font-bold">Superior</td>
+<td class="px-6 py-4 font-body-sm italic text-steel-gray">EN 12691</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Application Guide Section -->
+<section class="py-20 border-t border-steel-gray/10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="aspect-square bg-cover bg-center border-4 border-white shadow-xl rotate-1 group hover:rotate-0 transition-transform duration-500" data-alt="A wide-angle professional photograph of a construction site featuring a worker in safety gear correctly applying a bitumen waterproofing membrane to a concrete foundation. The lighting is bright daylight, highlighting the texture of the materials and the precision of the application. The aesthetic is industrial, clean, and highly professional, emphasizing safety and structural durability." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBE9CXKQ6fGBCW7ET01oNIKtTu2JUOpPEjAX0AX5Q0fLtldRKkgWUoc-MwzllBgPVg4wUcRcvG3c7ZevKwURbKciRs26SyH8zg40JXISD5e3TG3XwyZPBlFGJ4WcrP88tAdqzoL4jvag32t2JWQCqeN27YwmwmZ7HaU72NA2Dr9oq1RKfN0tFni4crduX5bjjBTztxfJiqMMIQ6ZS5sHkQgy-wrhGCVx9zSmScEUu8XkwmWQq4nE99o')"></div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-headline-md text-headline-md text-industrial-navy mb-8">Technical Application Protocol</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-safety-orange flex items-center justify-center font-headline-sm text-safety-orange">01</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-industrial-navy text-lg mb-2">Surface Preparation</h4>
+<p class="text-steel-gray font-body-md">Substrate must be clean, dry, and free of sharp protrusions. For bitumen, apply primer to ensure maximum adhesion.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-safety-orange flex items-center justify-center font-headline-sm text-safety-orange">02</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-industrial-navy text-lg mb-2">Lapping &amp; Bonding</h4>
+<p class="text-steel-gray font-body-md">Maintain a minimum 150mm overlap. For Polythene, use double-sided jointing tape. For Bitumen, ensure a full torch-on melt fusion.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border-2 border-safety-orange flex items-center justify-center font-headline-sm text-safety-orange">03</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-industrial-navy text-lg mb-2">Protection Layer</h4>
+<p class="text-steel-gray font-body-md">Immediately protect membranes from backfilling or construction traffic using protective boards or sand blinding.</p>
+</div>
+</div>
+</div>
+<button class="mt-12 bg-industrial-navy text-white px-8 py-4 font-label-caps text-label-caps hover:bg-black transition-colors flex items-center gap-4">
+                        DOWNLOAD FULL GUIDE <span class="material-symbols-outlined">picture_as_pdf</span>
+</button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-safety-orange py-16">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">Bulk Procurement Available</h2>
+<p class="font-body-lg text-body-lg text-white/90 mb-10 max-w-2xl mx-auto">Contact our technical department for volume pricing and tailored submittal packages for your specific project requirements.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-industrial-navy text-white px-10 py-4 font-label-caps text-label-caps hover:shadow-lg transition-all">REQUEST BULK QUOTE</button>
+<button class="bg-white text-safety-orange px-10 py-4 font-label-caps text-label-caps hover:bg-concrete-white transition-all">REQUEST SAMPLE KIT</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-industrial-navy text-on-primary border-t border-steel-gray">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm font-bold text-safety-orange">Qtrix Global</span>
+<p class="font-body-sm text-body-sm text-steel-gray">Premium industrial supplies for modern infrastructure. Engineering excellence in every layer.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-primary mb-6">Quick Links</h4>
+<ul class="flex flex-col gap-3">
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Steel Rebar</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Concrete Mix</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Safety Gear</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-primary mb-6">Legal</h4>
+<ul class="flex flex-col gap-3">
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Terms of Service</a></li>
+<li class=""><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-primary mb-6">Contact</h4>
+<p class="font-body-sm text-body-sm text-steel-gray mb-2">Technical Sales: +1 (555) 012-3456</p>
+<p class="font-body-sm text-body-sm text-steel-gray">Headquarters: New York, NY</p>
+</div>
+</div>
+<div class="border-t border-steel-gray/20 py-6 px-margin-desktop max-w-container-max mx-auto text-center md:text-left">
+<p class="font-body-sm text-body-sm text-steel-gray">© 2024 Qtrix Global. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for table rows and hover states
+        document.querySelectorAll('tr').forEach(row => {
+            row.addEventListener('mouseenter', () => {
+                row.style.transform = 'translateX(4px)';
+                row.style.transition = 'transform 0.2s ease-out';
+            });
+            row.addEventListener('mouseleave', () => {
+                row.style.transform = 'translateX(0)';
+            });
+        });
+
+        // Sticky Nav logic
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+
+</body></html>

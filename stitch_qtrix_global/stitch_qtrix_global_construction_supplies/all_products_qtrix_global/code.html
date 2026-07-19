@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Products | Qtrix Global</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "safety-orange": "#F97316",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2c3134",
+                    "surface-container-high": "#e4e9ed",
+                    "on-secondary-fixed-variant": "#783200",
+                    "secondary": "#9d4300",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-container-highest": "#dfe3e7",
+                    "inverse-primary": "#bec6e0",
+                    "industrial-navy": "#0F172A",
+                    "on-surface": "#171c1f",
+                    "inverse-on-surface": "#edf1f5",
+                    "steel-gray": "#64748B",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#5c2400",
+                    "on-secondary": "#ffffff",
+                    "primary": "#000000",
+                    "on-tertiary-fixed-variant": "#3a485c",
+                    "tertiary-fixed": "#d5e3fd",
+                    "surface-container-low": "#f0f4f8",
+                    "tertiary-fixed-dim": "#b9c7e0",
+                    "on-error": "#ffffff",
+                    "on-background": "#171c1f",
+                    "concrete-white": "#F8FAFC",
+                    "on-tertiary-container": "#76859b",
+                    "background": "#f6fafe",
+                    "surface": "#f6fafe",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#0d1c2f",
+                    "surface-bright": "#f6fafe",
+                    "surface-dim": "#d6dade",
+                    "secondary-container": "#fd761a",
+                    "outline-variant": "#c6c6cd",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "tertiary": "#000000",
+                    "primary-container": "#131b2e",
+                    "secondary-fixed-dim": "#ffb690",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-container": "#eaeef2",
+                    "secondary-fixed": "#ffdbca",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#565e74",
+                    "on-surface-variant": "#45464d",
+                    "tertiary-container": "#0d1c2f",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#dfe3e7",
+                    "outline": "#76777d",
+                    "on-primary-container": "#7c839b",
+                    "on-secondary-fixed": "#341100"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "label-caps": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .card-hover-effect:hover img {
+            filter: grayscale(0%);
+        }
+        .card-hover-effect img {
+            filter: grayscale(100%);
+            transition: filter 0.4s ease;
+        }
+        .technical-table-row:nth-child(even) {
+            background-color: #f1f5f9;
+        }
+    </style>
+</head>
+<body class="bg-concrete-white font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky z-50 bg-industrial-navy text-on-primary border-b border-steel-gray">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Qtrix Global Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLv3QGAE48TtrkmaqnwDQ21gLrJ8jmSSOhWipYIq26HdN8xNkvppFQb8OHsz-tJ2zzh-Oi_UZMOwS-w3DOMbAi1ZCQWR9M12QYicIU_8mtLf8ybE-p66aT_qSo-nWM17X1odWSf9fc8xY_c_eFCeLKJmFfnST1_C1Z0aNxEJ4UqbNdfBxoQu7KSOLBoXy28sPUQJ8OLd_JxlBbC8lGn2RMmo25Kag8F7Vauf5h-lAtAdaz7pGLKhoKRuRw"/>
+<span class="font-headline-sm text-headline-sm font-bold text-safety-orange hidden md:block">Qtrix Global</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-safety-orange border-b-2 border-safety-orange pb-1" href="#">Products</a>
+<a class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-steel-gray text-sm">search</span>
+<input class="bg-primary-container text-on-primary-container text-body-sm pl-10 pr-4 py-2 rounded-lg border border-steel-gray/30 focus:outline-none focus:border-safety-orange transition-all w-48 lg:w-64" placeholder="Search components..." type="text"/>
+</div>
+<button class="bg-safety-orange hover:bg-secondary-container text-white px-6 py-2 rounded font-label-caps text-label-caps uppercase tracking-wider transition-all active:opacity-80">
+                    Request Quote
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[60vh] min-h-[500px] flex items-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLv43Mn5Mg2nJlxV0tJDBAYKjyo9dDsmdsGOQDS8MWCvajVWokk88j8mBH2j4dwwjx2fxcy8kejtW_aYWJt98PunL_0PKBppjhl7vUWpIxXlHEfny33vUBcB5Cg9Mohc4OvXMBESWPiSxkVemPiIG3Bt64EQRGE07qUaISxE9-yL0ECmnVKbdv_Zz078EMZT-7DjY_03oJuy-iAZ6ayBjbFs_MygskUHoE0DuFNlQhhhtQJB-7eI1QuSAQ')"></div>
+<div class="absolute inset-0 bg-industrial-navy/70 backdrop-blur-[2px]"></div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="max-w-2xl border-l-4 border-safety-orange pl-8 py-4">
+<span class="font-label-caps text-label-caps text-safety-orange mb-4 block">INDUSTRIAL SOLUTIONS FOR GLOBAL INFRASTRUCTURE</span>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-white mb-6 uppercase">All Products</h1>
+<p class="font-body-lg text-body-lg text-slate-200 mb-8 max-w-lg">
+                    Premium structural materials, safety equipment, and technical supplies engineered for durability and mathematical precision in modern construction.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-safety-orange text-white px-8 py-4 rounded font-label-caps text-label-caps transition-all hover:translate-y-[-2px] hover:shadow-lg">
+                        VIEW CATALOGUE
+                    </button>
+<button class="border border-white text-white px-8 py-4 rounded font-label-caps text-label-caps hover:bg-white hover:text-industrial-navy transition-all">
+                        TECHNICAL SPECS
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Search & Filter Bar -->
+<section class="bg-white border-b border-steel-gray sticky top-16 z-40">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4 w-full md:w-auto">
+<span class="font-label-caps text-label-caps text-steel-gray">FILTER BY:</span>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-1.5 rounded-full bg-industrial-navy text-white font-label-caps text-label-caps">All</button>
+<button class="px-4 py-1.5 rounded-full border border-steel-gray text-steel-gray font-label-caps text-label-caps hover:border-safety-orange hover:text-safety-orange transition-colors">Structural</button>
+<button class="px-4 py-1.5 rounded-full border border-steel-gray text-steel-gray font-label-caps text-label-caps hover:border-safety-orange hover:text-safety-orange transition-colors">Finishing</button>
+<button class="px-4 py-1.5 rounded-full border border-steel-gray text-steel-gray font-label-caps text-label-caps hover:border-safety-orange hover:text-safety-orange transition-colors">Safety</button>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full md:w-auto justify-end">
+<span class="font-body-sm text-body-sm text-steel-gray hidden lg:inline">Showing 32 industrial categories</span>
+<div class="flex items-center border border-steel-gray rounded divide-x divide-steel-gray">
+<button class="p-2 text-industrial-navy"><span class="material-symbols-outlined">grid_view</span></button>
+<button class="p-2 text-steel-gray hover:text-industrial-navy"><span class="material-symbols-outlined">view_list</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Category Card 1 -->
+<div class="card-hover-effect bg-white border border-steel-gray overflow-hidden group">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="Close-up high-resolution photograph of premium plywood and white wood stacks in an organized industrial warehouse. Dramatic side lighting highlights the wood grain texture. The color palette is warm wood tones contrasted with clean white walls and industrial navy racking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACZw1sllPhJnUGkQcjBGaCiwwdkPP3mI33O00JnSzt9oYlK2HKoir34vvHqzTCTtErRDNv4nd8pNtzhZTedQuEZ8qS0IXHFzbdihlYQ9R2tKvmVSApahTmIJGb6aPGoEcRLdTedpIjq665Um_poTPGWrMMlbyPowS9dxSQm6mr-JlMkh8KYtxioONqcjMNK45MeyQ2TJ2gUh7LXmJ_nAcgOq1XRKn3Bji5X0jUrU-hEJe6Fnlatzl8"/>
+<div class="absolute top-4 left-4">
+<span class="bg-industrial-navy text-white font-label-caps text-label-caps px-3 py-1">TIMBER</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm mb-2 group-hover:text-safety-orange transition-colors">Plywood &amp; White wood</h3>
+<p class="font-body-sm text-body-sm text-steel-gray mb-4">Structural grade lumber and finishing plywood for formwork and framing.</p>
+<div class="flex justify-between items-center border-t border-steel-gray/20 pt-4">
+<span class="font-label-caps text-label-caps text-industrial-navy">12 VARIANTS</span>
+<a class="text-safety-orange flex items-center gap-1 font-label-caps text-label-caps hover:underline" href="#">
+                            EXPLORE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Category Card 2 -->
+<div class="card-hover-effect bg-white border border-steel-gray overflow-hidden group">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="Professional industrial shot of heavy-duty electric cables coiled on large wooden spools. The copper and insulated textures are sharp under bright, cool-toned construction site lighting. Background shows blurry structural steel framework." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ4KP9yyTiwwRxErLCITIXObgHGbptEItUgBaTNVUXVZH5GXEE6JqB0FwhonCUMq-3QfmFIzdGcfKvHfvASn9NJgAdCkV-ZIQ6EBdyPfDf4ndAkxdQfRpAH2ulE9W4026OxXsvWwFESzUbt7XTvxOvF57r7rbuyOnEyW2utEFpBC9T4tKB_jcgk1NjqqkYaCQR5VO52gbLX-BxzkMDl4ePc8_0L3kLy7JKgiDb-ox5kD1_wBDHx_a2"/>
+<div class="absolute top-4 left-4">
+<span class="bg-industrial-navy text-white font-label-caps text-label-caps px-3 py-1">ELECTRICAL</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm mb-2 group-hover:text-safety-orange transition-colors">Electric cables</h3>
+<p class="font-body-sm text-body-sm text-steel-gray mb-4">High-voltage transmission lines and residential grade wiring solutions.</p>
+<div class="flex justify-between items-center border-t border-steel-gray/20 pt-4">
+<span class="font-label-caps text-label-caps text-industrial-navy">45 VARIANTS</span>
+<a class="text-safety-orange flex items-center gap-1 font-label-caps text-label-caps hover:underline" href="#">
+                            EXPLORE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Category Card 3 -->
+<div class="card-hover-effect bg-white border border-steel-gray overflow-hidden group">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="Sleek, minimalist bathroom and kitchen fixtures including a modern chrome faucet and industrial-style sink. The lighting is high-key and clean, emphasizing polished surfaces. The aesthetic is professional and luxury-commercial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9Y3O6WIwCu3J_4R8zcooV71MeNAqmQUnTn-KYaPpqAr_TVLwvEY_JRAKuWVpjnCK7GbbWrKTJ_5UHC_9Kgc3CvNEaCFB0SrIc0rBR2TwXTgmpl9Hp71Mx2b9R9qgv9yJfodoOhkaJPglbvEe8sqK0Iemxpw9X6_YCwYjtcFN5qFgYc6p2YCmIvq18HmFWwQKJTR-ESh4tkD8WhURfTvJFdAhFosSyfdglfK76FEMdkJgH6j4rgB4h"/>
+<div class="absolute top-4 left-4">
+<span class="bg-industrial-navy text-white font-label-caps text-label-caps px-3 py-1">FINISHING</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm mb-2 group-hover:text-safety-orange transition-colors">Bathroom &amp; Kitchen</h3>
+<p class="font-body-sm text-body-sm text-steel-gray mb-4">Commercial grade fixtures and heavy-duty plumbing infrastructure.</p>
+<div class="flex justify-between items-center border-t border-steel-gray/20 pt-4">
+<span class="font-label-caps text-label-caps text-industrial-navy">28 VARIANTS</span>
+<a class="text-safety-orange flex items-center gap-1 font-label-caps text-label-caps hover:underline" href="#">
+                            EXPLORE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Category Card 4 -->
+<div class="card-hover-effect bg-white border border-steel-gray overflow-hidden group">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="Industrial abstract macro of coiled steel wires and galvanized nails. The metallic sheen is crisp and detailed, with cool industrial navy shadows and highlights from overhead halogen lights. The mood is sturdy and technical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI5sIzf-fd-ZS4S2WdyAWF--wEMZM-ZPE2wavN8JdxmaQffzO2m-FWNCMlKu-1plTtQwiuQvzd7W3cCQR5ir7rLNTPttQtItJU-93H_oXEyPFvT-AXEAmy-o2tEscq9HAP9bKSNmtGNN8zOu8fObMIkiEZwf9y7l1gT4iZYpprWaHBkyfsAqW5YJky4ZdRg12S0tuE6SbabYJHRBdKqdaNwzvi54URnKQ42uZkKpe6IejfPooQg_i7"/>
+<div class="absolute top-4 left-4">
+<span class="bg-industrial-navy text-white font-label-caps text-label-caps px-3 py-1">STRUCTURAL</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm mb-2 group-hover:text-safety-orange transition-colors">Steel Wires &amp; Nails</h3>
+<p class="font-body-sm text-body-sm text-steel-gray mb-4">Galvanized binding wires and industrial grade fasteners for masonry.</p>
+<div class="flex justify-between items-center border-t border-steel-gray/20 pt-4">
+<span class="font-label-caps text-label-caps text-industrial-navy">150+ VARIANTS</span>
+<a class="text-safety-orange flex items-center gap-1 font-label-caps text-label-caps hover:underline" href="#">
+                            EXPLORE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Category Card 5 -->
+<div class="card-hover-effect bg-white border border-steel-gray overflow-hidden group">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="High-quality safety gear including an orange hard hat, protective goggles, and industrial gloves laid out on a blueprint. The safety orange color is vibrant against a technical gray background. Professional construction site gear photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADj42wQuZuG7_UrFkrnB3bvF4Xe1Lcid59lVyThCTQ0AJ6YzdLCDSEtjD3s4wNf3QqQFfeqR428dlBhF3haKlz_2AIuZS8_5DljRJYhTyGSjB_-6qIa9u1sIblAia2_GfGT6dkObNt76AhgXqltxOAD8Zvj5QsFl2RSwsNMAu9ACoBIvE-6AaVVlIn3BfNsvfTz8PHvwY3go8E_Y-H5VsCsXhK1U97l9WKvF-4NUXGUkTrW8dv-gEx"/>
+<div class="absolute top-4 left-4">
+<span class="bg-safety-orange text-white font-label-caps text-label-caps px-3 py-1">PPE &amp; SAFETY</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm mb-2 group-hover:text-safety-orange transition-colors">Safety Gear</h3>
+<p class="font-body-sm text-body-sm text-steel-gray mb-4">ISO certified personal protective equipment for hazardous environments.</p>
+<div class="flex justify-between items-center border-t border-steel-gray/20 pt-4">
+<span class="font-label-caps text-label-caps text-industrial-navy">32 VARIANTS</span>
+<a class="text-safety-orange flex items-center gap-1 font-label-caps text-label-caps hover:underline" href="#">
+                            EXPLORE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Category Card 6 -->
+<div class="card-hover-effect bg-white border border-steel-gray overflow-hidden group">
+<div class="h-64 relative">
+<img class="w-full h-full object-cover" data-alt="Rolls of industrial waterproofing membranes and protective sheets on a construction site. Low angle shot looking up at structural steel beams. The lighting is overcast and soft, providing clear detail of the material textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiLjsKUOxXZZkTy5taohATyMjFJAdgw4cJyxnGsZ-11xrgDkBcBka3rzxKQJJVBQgiQBhQxArTnkxq4PkjvTUWX2GP-jUR9oaI_rRV3KHSY6h6x0aWsDi4bKeEpFi7WbzQGpxacjcirM7_7tOVceO0doPNlKfNL2TQlNZRsGtp31U-ncFMsYknayIrKTjtyITEzG9SJSdbId7Met37AwBKIBsSUnCXul1UrTkDWQSWFxf6yBPZUlah"/>
+<div class="absolute top-4 left-4">
+<span class="bg-industrial-navy text-white font-label-caps text-label-caps px-3 py-1">PROTECTION</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-sm text-headline-sm mb-2 group-hover:text-safety-orange transition-colors">Membranes &amp; Sheets</h3>
+<p class="font-body-sm text-body-sm text-steel-gray mb-4">Advanced waterproofing solutions and heavy-duty protective sheeting.</p>
+<div class="flex justify-between items-center border-t border-steel-gray/20 pt-4">
+<span class="font-label-caps text-label-caps text-industrial-navy">18 VARIANTS</span>
+<a class="text-safety-orange flex items-center gap-1 font-label-caps text-label-caps hover:underline" href="#">
+                            EXPLORE <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Technical Specs Table Section (Contextual Extra) -->
+<section class="bg-industrial-navy py-20 text-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-12">
+<h2 class="font-headline-lg text-white mb-4 uppercase">Technical Standards</h2>
+<p class="text-steel-gray max-w-xl">All Qtrix Global products adhere to rigorous international safety and durability benchmarks.</p>
+</div>
+<div class="overflow-x-auto border border-steel-gray">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-800">
+<th class="p-4 font-label-caps text-label-caps text-safety-orange">Category</th>
+<th class="p-4 font-label-caps text-label-caps text-safety-orange">Standard Certification</th>
+<th class="p-4 font-label-caps text-label-caps text-safety-orange">Origin</th>
+<th class="p-4 font-label-caps text-label-caps text-safety-orange">Load Rating</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-steel-gray/20">
+<tr class="hover:bg-slate-800/50 transition-colors">
+<td class="p-4 font-body-sm">Structural Steel</td>
+<td class="p-4 font-body-sm">ASTM A36 / ISO 9001</td>
+<td class="p-4 font-body-sm">Germany</td>
+<td class="p-4 font-body-sm">500 MPa</td>
+</tr>
+<tr class="hover:bg-slate-800/50 transition-colors">
+<td class="p-4 font-body-sm">Electric Cables</td>
+<td class="p-4 font-body-sm">IEC 60502-1</td>
+<td class="p-4 font-body-sm">UAE</td>
+<td class="p-4 font-body-sm">0.6/1.0 kV</td>
+</tr>
+<tr class="hover:bg-slate-800/50 transition-colors">
+<td class="p-4 font-body-sm">Safety Gear</td>
+<td class="p-4 font-body-sm">EN 397:2012</td>
+<td class="p-4 font-body-sm">USA</td>
+<td class="p-4 font-body-sm">N/A</td>
+</tr>
+<tr class="hover:bg-slate-800/50 transition-colors">
+<td class="p-4 font-body-sm">Timber</td>
+<td class="p-4 font-body-sm">FSC Certified</td>
+<td class="p-4 font-body-sm">Canada</td>
+<td class="p-4 font-body-sm">B2 Grade</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-white border-y border-steel-gray">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-lg text-industrial-navy mb-6 uppercase">Need a custom technical submittal?</h2>
+<p class="text-steel-gray mb-10 max-w-2xl mx-auto">Our engineering team can provide detailed data sheets and CAD drawings for your specific project requirements.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<input class="px-6 py-4 border border-steel-gray focus:border-safety-orange focus:ring-1 focus:ring-safety-orange outline-none w-full sm:w-80" placeholder="Enter your business email" type="email"/>
+<button class="bg-industrial-navy text-white px-10 py-4 font-label-caps text-label-caps hover:bg-black transition-all">CONSULT AN EXPERT</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-industrial-navy text-on-primary border-t border-steel-gray">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<span class="font-headline-sm text-headline-sm font-bold text-safety-orange block mb-6">Qtrix Global</span>
+<p class="text-steel-gray font-body-sm text-body-sm mb-6 leading-relaxed">
+                    Setting the gold standard in industrial supply chains since 2008. Reliable, durable, and precise engineering materials for the future.
+                </p>
+<div class="flex gap-4">
+<a class="text-steel-gray hover:text-safety-orange transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-steel-gray hover:text-safety-orange transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-steel-gray hover:text-safety-orange transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-safety-orange mb-6">QUICK LINKS</h4>
+<ul class="space-y-4">
+<li><a class="text-steel-gray hover:text-on-primary font-body-sm text-body-sm transition-colors hover:underline decoration-safety-orange" href="#">Steel Rebar</a></li>
+<li><a class="text-steel-gray hover:text-on-primary font-body-sm text-body-sm transition-colors hover:underline decoration-safety-orange" href="#">Concrete Mix</a></li>
+<li><a class="text-steel-gray hover:text-on-primary font-body-sm text-body-sm transition-colors hover:underline decoration-safety-orange" href="#">Safety Gear</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-safety-orange mb-6">RESOURCES</h4>
+<ul class="space-y-4">
+<li><a class="text-steel-gray hover:text-on-primary font-body-sm text-body-sm transition-colors hover:underline decoration-safety-orange" href="#">Technical Papers</a></li>
+<li><a class="text-steel-gray hover:text-on-primary font-body-sm text-body-sm transition-colors hover:underline decoration-safety-orange" href="#">Project Gallery</a></li>
+<li><a class="text-steel-gray hover:text-on-primary font-body-sm text-body-sm transition-colors hover:underline decoration-safety-orange" href="#">Safety Guidelines</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-safety-orange mb-6">LEGAL</h4>
+<ul class="space-y-4">
+<li><a class="text-steel-gray hover:text-on-primary font-body-sm text-body-sm transition-colors hover:underline decoration-safety-orange" href="#">Terms of Service</a></li>
+<li><a class="text-steel-gray hover:text-on-primary font-body-sm text-body-sm transition-colors hover:underline decoration-safety-orange" href="#">Privacy Policy</a></li>
+<li><a class="text-steel-gray hover:text-on-primary font-body-sm text-body-sm transition-colors hover:underline decoration-safety-orange" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-steel-gray/20 py-8">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-body-sm text-body-sm text-steel-gray">© 2024 Qtrix Global. All rights reserved.</span>
+<span class="font-label-caps text-label-caps text-steel-gray uppercase tracking-widest">Global Supply Excellence</span>
+</div>
+</div>
+</footer>
+<script>
+        // Simple search interaction
+        const searchInput = document.querySelector('input[type="text"]');
+        if(searchInput) {
+            searchInput.addEventListener('focus', () => {
+                searchInput.classList.add('w-80');
+            });
+            searchInput.addEventListener('blur', () => {
+                if(searchInput.value === "") {
+                    searchInput.classList.remove('w-80');
+                }
+            });
+        }
+    </script>
+</body></html>

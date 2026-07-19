@@ -1,0 +1,399 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Qtrix Global | Premium Construction Materials</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e4e9ed",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#dae2fd",
+                        "inverse-primary": "#bec6e0",
+                        "primary-container": "#131b2e",
+                        "on-secondary-fixed": "#341100",
+                        "secondary": "#9d4300",
+                        "primary": "#000000",
+                        "on-surface-variant": "#45464d",
+                        "on-surface": "#171c1f",
+                        "background": "#f6fafe",
+                        "outline": "#76777d",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-container-low": "#f0f4f8",
+                        "steel-gray": "#64748B",
+                        "tertiary": "#000000",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#edf1f5",
+                        "on-background": "#171c1f",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "error": "#ba1a1a",
+                        "concrete-white": "#F8FAFC",
+                        "surface-container": "#eaeef2",
+                        "secondary-container": "#fd761a",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#d5e3fd",
+                        "surface-container-highest": "#dfe3e7",
+                        "surface-variant": "#dfe3e7",
+                        "industrial-navy": "#0F172A",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#0d1c2f",
+                        "inverse-surface": "#2c3134",
+                        "outline-variant": "#c6c6cd",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "on-primary-fixed": "#131b2e",
+                        "safety-orange": "#F97316",
+                        "on-secondary-container": "#5c2400",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "on-secondary-fixed-variant": "#783200",
+                        "on-primary-container": "#7c839b",
+                        "surface-bright": "#f6fafe",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb690",
+                        "surface": "#f6fafe",
+                        "surface-tint": "#565e74",
+                        "on-tertiary-container": "#76859b",
+                        "secondary-fixed": "#ffdbca",
+                        "surface-dim": "#d6dade",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .industrial-overlay {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 100%);
+        }
+        .grid-blueprint {
+            background-image: radial-gradient(#64748B 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="bg-concrete-white font-body-md text-on-surface selection:bg-safety-orange selection:text-white">
+<!-- TopNavBar -->
+<header class="fixed top-0 z-50 w-full bg-concrete-white border-b border-steel-gray/20 h-20">
+<nav class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-8">
+<a class="font-headline-sm text-headline-sm font-bold text-industrial-navy" href="#"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCez7M9ehwxIf1dVO3dGokoc8s5FPBt4fUrVYaAzxCjOv6UXg3KahQTzXSrJEU0rpYaqhOE2P0aF88YCROZeGSm_O3O53c9nmXb9yhv5LGwlmo7yyZQLe9P29AKPxd21Zmy6CLzkO7KiBC3HltvCxxSZvASAH5OJYb0NnnYeFdNVb35OmGFw25dV_kheSnuGhOALbV7DSxyt-EqSCA4jqcWC5Ju_ov5KpfuKcg-QiP5fPqZ6Kpf2xCH" alt="Qtrix Global Logo" class="h-16 w-auto object-contain"></a>
+<div class="hidden md:flex gap-6">
+<a class="text-safety-orange font-bold border-b-2 border-safety-orange pb-1 font-label-caps text-label-caps" href="#">Home</a>
+<a class="text-industrial-navy font-medium font-label-caps text-label-caps hover:text-safety-orange transition-colors duration-200" href="#">Products</a>
+<a class="text-industrial-navy font-medium font-label-caps text-label-caps hover:text-safety-orange transition-colors duration-200" href="#">About Us</a>
+<a class="text-industrial-navy font-medium font-label-caps text-label-caps hover:text-safety-orange transition-colors duration-200" href="#">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-low border border-outline-variant px-4 py-2 text-body-sm font-body-sm w-64 focus:outline-none focus:border-safety-orange" placeholder="Search Materials..." type="text">
+<span class="material-symbols-outlined absolute right-2 top-2 text-steel-gray">search</span>
+</div>
+<button class="bg-safety-orange text-white px-6 py-3 font-label-caps text-label-caps font-bold transition-all active:scale-95">Get a Quote</button>
+</div>
+</nav>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative h-[80vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale opacity-80 brightness-75" src="https://lh3.googleusercontent.com/aida/AP1WRLv43Mn5Mg2nJlxV0tJDBAYKjyo9dDsmdsGOQDS8MWCvajVWokk88j8mBH2j4dwwjx2fxcy8kejtW_aYWJt98PunL_0PKBppjhl7vUWpIxXlHEfny33vUBcB5Cg9Mohc4OvXMBESWPiSxkVemPiIG3Bt64EQRGE07qUaISxE9-yL0ECmnVKbdv_Zz078EMZT-7DjY_03oJuy-iAZ6ayBjbFs_MygskUHoE0DuFNlQhhhtQJB-7eI1QuSAQ">
+<div class="absolute inset-0 industrial-overlay"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-3xl">
+<span class="inline-block bg-safety-orange text-white px-4 py-1 font-label-caps text-label-caps mb-6">ESTABLISHED 2024</span>
+<h1 class="font-display-lg text-display-lg text-white mb-6 leading-tight">Your Partner in Premium <span class="text-safety-orange">Construction</span> Materials</h1>
+<p class="font-body-lg text-body-lg text-white/80 mb-10 max-w-xl">Reliability, durability, and high-quality engineering. We supply the foundation for tomorrow's infrastructure with professional-grade building solutions.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-safety-orange text-white px-8 py-4 font-label-caps text-label-caps font-bold flex items-center gap-2 group">
+                            VIEW INVENTORY
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border-2 border-white text-white px-8 py-4 font-label-caps text-label-caps font-bold hover:bg-white hover:text-industrial-navy transition-colors">
+                            DOWNLOAD CATALOG
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-industrial-navy py-12">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center md:border-r border-white/10">
+<div class="font-headline-lg text-headline-lg text-safety-orange">15k+</div>
+<div class="font-label-caps text-label-caps text-white/60">SKUS AVAILABLE</div>
+</div>
+<div class="text-center md:border-r border-white/10">
+<div class="font-headline-lg text-headline-lg text-safety-orange">24h</div>
+<div class="font-label-caps text-label-caps text-white/60">DELIVERY TURNAROUND</div>
+</div>
+<div class="text-center md:border-r border-white/10">
+<div class="font-headline-lg text-headline-lg text-safety-orange">ISO</div>
+<div class="font-label-caps text-label-caps text-white/60">CERTIFIED QUALITY</div>
+</div>
+<div class="text-center">
+<div class="font-headline-lg text-headline-lg text-safety-orange">500+</div>
+<div class="font-label-caps text-label-caps text-white/60">PROJECTS SUPPLIED</div>
+</div>
+</div>
+</section>
+<!-- Products Bento Grid -->
+<section class="py-24 relative overflow-hidden bg-white" id="products">
+<div class="absolute inset-0 grid-blueprint pointer-events-none"></div>
+<div class="px-margin-desktop max-w-container-max mx-auto relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-industrial-navy mb-4">Our Products</h2>
+<div class="w-24 h-1.5 bg-safety-orange mb-6"></div>
+<p class="font-body-md text-body-md text-steel-gray">Precision-engineered materials for every phase of construction. From structural steel to finishing paints, we ensure consistency across your entire project.</p>
+</div>
+<a class="font-label-caps text-label-caps text-safety-orange font-bold flex items-center gap-2 group" href="#">
+                        EXPLORE ALL CATEGORIES
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Major Category 1 -->
+<div class="md:col-span-2 group relative overflow-hidden bg-surface-container border border-outline-variant h-[400px]">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Close-up photograph of high-quality plywood stacks in an industrial warehouse setting. The lighting is crisp and cool, highlighting the fine grain textures and technical precision of the layers. The overall aesthetic is clean, professional, and corporate, featuring industrial navy and safety orange accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKsTGR_foB70KdxfqJALAiKTh-xKvSTWl4sPbS6w8pWPeEMefZMdDmIyBTCn8PwJoiqcfCIjpkXlpDce2HJq61WKelz2ROkXM6SG5XMs0R8DJljQIldda1xFwISs9p4evmg810oSGfV4FMvKRhcNdheZBc_uzFb-V9v_SgtR7xypGCKR_Kd4DlB1RN1WyYI9ao-L6EN6kbboTXNyzAvpj5FBKyPk4-6U66XSqwugHzrLBGHVnBDzSQ">
+<div class="absolute bottom-0 left-0 p-8 z-20 w-full bg-gradient-to-t from-black/80 to-transparent">
+<span class="text-safety-orange font-label-caps text-label-caps mb-2 block">STRUCTURAL</span>
+<h3 class="font-headline-sm text-headline-sm text-white">Plywood &amp; White wood</h3>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="group relative overflow-hidden bg-surface-container border border-outline-variant h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Professional studio shot of industrial electric cables coiled neatly. The shot is high-contrast with sharp focus on the copper cores and robust insulation. Minimalist industrial aesthetic with a clean white background and subtle shadows, fitting a modern construction material supplier theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLVJvqHiCFtEMon9BxA6xveR2BA8AjyPYKDYbAidXX0O7V46_lPLoTvwxTOvZWbnCQPIrEGiKTTE50FsFIX_CR2nyQ3tOR40iLx72PBHY18s1Tc465mGVQxpiL_fMHllW5NNqGZkSimIB0UvYTAlxUzF5dfRYB56FjKA_lmyBnO4XsO0MxyMihgqcV2U63vTlmp-Pcxpu_uWnfUo7yxhya8I9hpysHwYyJ056nwwuU6SWAdzYAr21A">
+<div class="absolute bottom-0 left-0 p-8 z-20 w-full bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-headline-sm text-headline-sm text-white">Electric cables</h3>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="group relative overflow-hidden bg-surface-container border border-outline-variant h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Modern bathroom and kitchen fixtures including premium faucets and hardware arranged in a structured layout. The image uses a minimalist high-key lighting style with a focus on metallic reflections and engineering quality. Corporate industrial color palette with concrete white backgrounds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHV41hhaDLiSjLmy1VTMWRiNXFlRl2AfqnWy1hpz1LOzGMR5TNuAlNs0fGY7ERJKE-JpDKfTmGYMoVINKArbo_RhNtR_Py8HuK9rVdwEbUrm5Fm6dlkdznZm7bTGl4aMM89NHqBKuwNVrqsEkZJnCbcppmFqdhAZ3fqSbTulZ8LB2lQ-7K2FAtlcLpKOlkqmc4p_CbjnEFpo4XOaXWSOl45cNQ2DQRag6tbfgswbU6PJ6NRshOFRAn">
+<div class="absolute bottom-0 left-0 p-8 z-20 w-full bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-headline-sm text-headline-sm text-white">Bathroom &amp; Kitchen</h3>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="group relative overflow-hidden bg-surface-container border border-outline-variant h-[280px]">
+<img class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A collection of construction safety gear including helmets, high-visibility jackets, and heavy-duty safety shoes. The scene is illuminated by bright laboratory-style lighting to emphasize professional standards and reliability. Strong industrial navy and safety orange colors dominate the frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABMjSP3vdWhViynzpfwUEDtgGTZrY4DnL8pG-Oq2TxFhJTuA5qRwz1F9Yrsm0-mRPGiHTeId9d6eMngctb0mk6Ty2UFSMQ161odT-GSmp47t9xA2Ak6UZJra2KBUy_4Q9zYrcE0AzxjAKXhypgO4XJJRNbdQUsG_mTsOUES3VarIZMzhjiSa_5BM21sjiRc4sJF6z8Gurc0Bb9fxist3PDmb6YUxHe4qvOk6ppKZiX4TwFtjd_ACvW">
+<div class="absolute bottom-0 left-0 p-6 z-20 w-full bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-body-lg text-body-lg font-bold text-white uppercase">Safety Gear</h3>
+</div>
+</div>
+<!-- Category 5 -->
+<div class="group relative overflow-hidden bg-surface-container border border-outline-variant h-[280px]">
+<img class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Close-up shot of industrial steel wires and rows of galvanized nails. The lighting highlights the metallic sheen and industrial durability of the fasteners. Minimalist composition with a technical blueprint feel, utilizing a clean and professional corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsNgjssN1VZlk50be9iyfmNCBXPfVb-VsTMWfj2zGeyFsF9wCRR8Q7-BwH5ZasQf6qwf4yxsqqd7-4mV_byOBYZl2muoFAG8pYiFvyKOXVgWr5pyrGkHvdhGW_x7eehy-XevlRlAJj6qq5y7CGBPiSgophQUrjNkeqfdBiBYeR4lKOwwKjznX2ijokhGp4YkCKW91vEpUw_IZYxSXq1z-XWcG54RNo5wZoAb_SblLhkiyf_g5Er-AZ">
+<div class="absolute bottom-0 left-0 p-6 z-20 w-full bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-body-lg text-body-lg font-bold text-white uppercase">Steel &amp; Nails</h3>
+</div>
+</div>
+<!-- Category 6 -->
+<div class="group relative overflow-hidden bg-surface-container border border-outline-variant h-[280px]">
+<img class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Industrial rolls of polythene and bitumen sheets for construction waterproofing. The image features architectural lighting and a focus on material texture and professional packaging. Modern minimalist style with deep shadows and high-contrast whites and oranges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBRACnTx9LnhAzCZ8azjFryS2us5SWwGah_DaAx-1aG1dJ_ToDmLvZpmeaCJka3oToSb8GwIiRZG-GezwHZKGbjpfiMaky-wgafTLHyjk_GB_qVtGCVAAv_aee6JlZsxVoTOibzAglmaDq1uZ44nMTnk3yOEfOy9Ujl8aGm0OMbZ-3_vDtwqQVXXoKxo74oSMzm-tIjU_px8PF05Ik-GfMMP4lPofTOxVI1D9yjdA_b925WQx-JYRw">
+<div class="absolute bottom-0 left-0 p-6 z-20 w-full bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-body-lg text-body-lg font-bold text-white uppercase">Membranes &amp; Sheets</h3>
+</div>
+</div>
+<!-- Category 7 -->
+<div class="group relative overflow-hidden bg-surface-container border border-outline-variant h-[280px]">
+<img class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Artistic macro shot of high-quality industrial paint in concrete white and industrial navy shades. The shot focuses on the liquid texture and the purity of the color. It matches the corporate minimalist brand identity of a premium construction supplier with safety orange highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkLcBsUzVUhzRe3NX1UIQhFqEb_lkL4EegSiObFThteTVK2btnVHmOQRHbvoGw0T590c-NP6eEhz1WQeOEhFWFEQVtkiH64r5nP5aONPxaAeT7jdw748DREgX2QZHzh8iioN2NuZbP0lsnEHIMlEq-CjUMpd4ogXemY9QCJ6nvU34hRLIRJrg7KoguSRDvq1PbO1yYqoYZwTm7qgMrMipyPDIMgTOH52IIu5ccIcMpX6POMgKdzjf8">
+<div class="absolute bottom-0 left-0 p-6 z-20 w-full bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-body-lg text-body-lg font-bold text-white uppercase">Industrial Paint</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quality & Sustainability Section -->
+<section class="py-24 bg-concrete-white">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1">
+<div class="relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-safety-orange/10 -z-10"></div>
+<img class="w-full h-auto border-4 border-white shadow-xl grayscale" src="https://lh3.googleusercontent.com/aida/AP1WRLuOXM8tvN0fRhPhFlTCYYrClrjyA3mAziAgIAOvonpgitPH1oqH6_8q7aAX7qs8PHvTEpqTK0CaWZwKZyYFS8DG0OJa8JBX2yO8b-woNv_D9sZShZnAawEyYnQeu9R9TuLKQOXgH8Hq9pwONN8C6DpUElFR7gHt-heR7ffqde28V2XatkekP9InCn4HcDLbkYYT7jHzmUje9F2EyQNAf3tgRewFz1qKy2gvtYZQgXR_yJ57a0yTXCKxtLg">
+<div class="absolute -bottom-10 -right-10 bg-industrial-navy p-8 hidden md:block max-w-xs border-l-4 border-safety-orange">
+<p class="text-white font-headline-sm text-headline-sm mb-2">Sustainable Foundation</p>
+<p class="text-white/60 text-body-sm">Our "Super Concrete" technology reduces carbon footprint by 40% while maintaining industry-leading structural integrity.</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="text-safety-orange font-label-caps text-label-caps font-bold tracking-widest block mb-4">COMMITMENT TO EXCELLENCE</span>
+<h2 class="font-headline-lg text-headline-lg text-industrial-navy mb-8">Quality &amp; Sustainability</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-industrial-navy flex items-center justify-center text-safety-orange">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-2">Rigorous Certification</h4>
+<p class="text-steel-gray">Every batch of material undergoes stringent laboratory testing to exceed international ASTM and ISO standards.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-industrial-navy flex items-center justify-center text-safety-orange">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-2">Greener Solutions</h4>
+<p class="text-steel-gray">We actively source materials from eco-certified manufacturers and prioritize recycled steel and sustainable timber.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-industrial-navy flex items-center justify-center text-safety-orange">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm mb-2">Trusted Logistics</h4>
+<p class="text-steel-gray">Our streamlined supply chain minimizes transit waste and ensures on-site delivery precision for your timeline.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-safety-orange">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center">
+<h2 class="font-display-lg text-display-lg text-white mb-8">Ready to Build Your Vision?</h2>
+<p class="font-body-lg text-body-lg text-white/90 mb-12 max-w-2xl mx-auto">Contact our technical experts for a custom quote or project consultation. We provide full logistical support and documentation for large-scale developments.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-industrial-navy text-white px-10 py-5 font-label-caps text-label-caps font-bold transition-all hover:bg-black active:scale-95">REQUEST QUOTATION</button>
+<button class="bg-white text-safety-orange px-10 py-5 font-label-caps text-label-caps font-bold transition-all hover:bg-concrete-white active:scale-95">SPEAK TO AN EXPERT</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-industrial-navy py-20 border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-headline-sm text-headline-sm font-bold text-concrete-white"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCez7M9ehwxIf1dVO3dGokoc8s5FPBt4fUrVYaAzxCjOv6UXg3KahQTzXSrJEU0rpYaqhOE2P0aF88YCROZeGSm_O3O53c9nmXb9yhv5LGwlmo7yyZQLe9P29AKPxd21Zmy6CLzkO7KiBC3HltvCxxSZvASAH5OJYb0NnnYeFdNVb35OmGFw25dV_kheSnuGhOALbV7DSxyt-EqSCA4jqcWC5Ju_ov5KpfuKcg-QiP5fPqZ6Kpf2xCH" alt="Qtrix Global Logo" class="h-12 w-auto object-contain"></div>
+<p class="text-concrete-white/60 text-body-sm">The industry standard for premium construction supplies. Building trust through material excellence since 2024.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:border-safety-orange hover:text-safety-orange transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:border-safety-orange hover:text-safety-orange transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-safety-orange mb-8">PRODUCTS</h4>
+<ul class="flex flex-col gap-4">
+<li class=""><a class="text-concrete-white/80 hover:text-safety-orange transition-colors text-body-sm" href="#">Plywood</a></li>
+<li class=""><a class="text-concrete-white/80 hover:text-safety-orange transition-colors text-body-sm" href="#">Steel</a></li>
+<li class=""><a class="text-concrete-white/80 hover:text-safety-orange transition-colors text-body-sm" href="#">Safety Gear</a></li>
+<li class=""><a class="text-concrete-white/80 hover:text-safety-orange transition-colors text-body-sm" href="#">Industrial Tools</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-safety-orange mb-8">COMPANY</h4>
+<ul class="flex flex-col gap-4">
+<li class=""><a class="text-concrete-white/80 hover:text-safety-orange transition-colors text-body-sm" href="#">About Us</a></li>
+<li class=""><a class="text-concrete-white/80 hover:text-safety-orange transition-colors text-body-sm" href="#">Projects</a></li>
+<li class=""><a class="text-concrete-white/80 hover:text-safety-orange transition-colors text-body-sm" href="#">Terms of Service</a></li>
+<li class=""><a class="text-concrete-white/80 hover:text-safety-orange transition-colors text-body-sm" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-safety-orange mb-8">NEWSLETTER</h4>
+<p class="text-concrete-white/60 text-body-sm mb-4">Stay updated with our latest technical specifications and project highlights.</p>
+<form class="flex">
+<input class="bg-white/5 border border-white/10 px-4 py-2 text-white text-body-sm focus:outline-none focus:border-safety-orange w-full" placeholder="Email" type="email">
+<button class="bg-safety-orange text-white px-4 py-2 font-bold">
+<span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-concrete-white/40 text-label-caps font-label-caps">© 2024 Qtrix Global. All rights reserved.</p>
+<p class="text-concrete-white/40 text-label-caps font-label-caps">BUILT FOR RELIABILITY</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions and scroll effects
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // Hover animations for product cards
+        const productCards = document.querySelectorAll('.group');
+        productCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const img = card.querySelector('img');
+                if (img) img.style.transform = 'scale(1.05)';
+            });
+            card.addEventListener('mouseleave', () => {
+                const img = card.querySelector('img');
+                if (img) img.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+
+
+
+
+
+
+</body></html>

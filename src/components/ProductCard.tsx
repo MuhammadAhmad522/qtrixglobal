@@ -1,0 +1,33 @@
+import type { ProductCategory } from '../types/content'
+import { Link } from 'react-router-dom'
+
+interface ProductCardProps {
+  product: ProductCategory
+  index: number
+}
+
+export function ProductCard({ product, index }: ProductCardProps) {
+  const isTall = index < 3
+
+  return (
+    <Link
+      className={`group relative overflow-hidden border border-outline-variant bg-surface-container ${product.featured ? 'md:col-span-2' : ''} ${isTall ? 'h-80 md:h-[400px]' : 'h-64 md:h-[280px]'}`}
+      to={`/products/${product.slug}`}
+    >
+      <img
+        className="absolute inset-0 size-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0"
+        src={product.image}
+        alt={product.alt}
+      />
+      <div className="absolute inset-0 bg-black/15 transition-colors group-hover:bg-transparent" />
+      <div className="product-card-gradient absolute inset-x-0 bottom-0 p-6 md:p-8">
+        {product.eyebrow && (
+          <p className="mb-2 font-label text-safety-orange">{product.eyebrow}</p>
+        )}
+        <h3 className={`${isTall ? 'font-heading text-2xl font-semibold normal-case' : 'font-label text-sm'} text-white`}>
+          {product.name}
+        </h3>
+      </div>
+    </Link>
+  )
+}

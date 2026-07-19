@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Steel Wires &amp; Nails | Qtrix Global</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "safety-orange": "#F97316",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2c3134",
+                        "surface-container-high": "#e4e9ed",
+                        "on-secondary-fixed-variant": "#783200",
+                        "secondary": "#9d4300",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-container-highest": "#dfe3e7",
+                        "inverse-primary": "#bec6e0",
+                        "industrial-navy": "#0F172A",
+                        "on-surface": "#171c1f",
+                        "inverse-on-surface": "#edf1f5",
+                        "steel-gray": "#64748B",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#dae2fd",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#5c2400",
+                        "on-secondary": "#ffffff",
+                        "primary": "#000000",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "tertiary-fixed": "#d5e3fd",
+                        "surface-container-low": "#f0f4f8",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "on-error": "#ffffff",
+                        "on-background": "#171c1f",
+                        "concrete-white": "#F8FAFC",
+                        "on-tertiary-container": "#76859b",
+                        "background": "#f6fafe",
+                        "surface": "#f6fafe",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "surface-bright": "#f6fafe",
+                        "surface-dim": "#d6dade",
+                        "secondary-container": "#fd761a",
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "tertiary": "#000000",
+                        "primary-container": "#131b2e",
+                        "secondary-fixed-dim": "#ffb690",
+                        "primary-fixed-dim": "#bec6e0",
+                        "surface-container": "#eaeef2",
+                        "secondary-fixed": "#ffdbca",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#565e74",
+                        "on-surface-variant": "#45464d",
+                        "tertiary-container": "#0d1c2f",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#dfe3e7",
+                        "outline": "#76777d",
+                        "on-primary-container": "#7c839b",
+                        "on-secondary-fixed": "#341100"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-concrete-white text-on-background font-body-md selection:bg-safety-orange selection:text-white">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky z-50 bg-industrial-navy border-b border-steel-gray">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-safety-orange">Qtrix Global</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-safety-orange border-b-2 border-safety-orange pb-1" href="#">Products</a>
+<a class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-primary hover:text-safety-orange transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<input class="bg-primary-container border-none text-on-primary-container text-body-sm py-2 px-4 pr-10 focus:ring-1 focus:ring-safety-orange rounded" placeholder="Search components..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-on-primary-container">search</span>
+</div>
+<button class="bg-safety-orange text-on-primary font-label-caps text-label-caps px-6 py-3 rounded-lg hover:opacity-80 transition-opacity uppercase tracking-wider">
+                    Request Quote
+                </button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-desktop py-12">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 mb-8 text-steel-gray font-label-caps text-label-caps uppercase">
+<a class="hover:text-safety-orange" href="#">Home</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<a class="hover:text-safety-orange" href="#">Products</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-on-surface">Steel Wires &amp; Nails</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+<!-- Product Image Section -->
+<div class="lg:col-span-6">
+<div class="relative bg-white border border-steel-gray/20 rounded overflow-hidden group">
+<div class="aspect-square flex items-center justify-center p-12">
+<img alt="Industrial Grade Steel Wires and Nails Packaging" class="max-w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvZHU0cvdwsbN1SQB0amGjMJ5kpPO7PntwM1w9kpCdRHh4wKZcdkB1rn4aGQh86Jd0wKPJV2tEH9s_b_pkUQM5j5D51mp1RwZAhl6JSDLPUS7TOSCIayfr7CLyQ_2Ge5QvtNKuNVbRX3C497IYGDKR1omxH3HkoOann1rPfGSAj4AM4jbczUCL66tA6i9DE-U1MIsYgSZmNFr3K_08Q7KevqIzJ6o4l9ZhCWi4R6OPWS4zVHD-v7bUrkGc"/>
+</div>
+<div class="absolute top-4 left-4">
+<span class="bg-industrial-navy text-white font-label-caps text-label-caps px-3 py-1 rounded">ISO 9001 CERTIFIED</span>
+</div>
+</div>
+<!-- Thumbnails/Variants -->
+<div class="grid grid-cols-4 gap-4 mt-6">
+<div class="border-2 border-safety-orange aspect-square bg-white flex items-center justify-center p-2 cursor-pointer">
+<img alt="Main variant thumbnail" class="max-w-full h-auto object-contain opacity-50" src="https://lh3.googleusercontent.com/aida/AP1WRLvZHU0cvdwsbN1SQB0amGjMJ5kpPO7PntwM1w9kpCdRHh4wKZcdkB1rn4aGQh86Jd0wKPJV2tEH9s_b_pkUQM5j5D51mp1RwZAhl6JSDLPUS7TOSCIayfr7CLyQ_2Ge5QvtNKuNVbRX3C497IYGDKR1omxH3HkoOann1rPfGSAj4AM4jbczUCL66tA6i9DE-U1MIsYgSZmNFr3K_08Q7KevqIzJ6o4l9ZhCWi4R6OPWS4zVHD-v7bUrkGc"/>
+</div>
+<div class="border border-steel-gray/20 aspect-square bg-white flex items-center justify-center p-2 cursor-pointer hover:border-safety-orange transition-colors">
+<div class="w-full h-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-steel-gray">inventory_2</span>
+</div>
+</div>
+<div class="border border-steel-gray/20 aspect-square bg-white flex items-center justify-center p-2 cursor-pointer hover:border-safety-orange transition-colors">
+<div class="w-full h-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-steel-gray">architecture</span>
+</div>
+</div>
+<div class="border border-steel-gray/20 aspect-square bg-white flex items-center justify-center p-2 cursor-pointer hover:border-safety-orange transition-colors">
+<div class="w-full h-full bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-steel-gray">precision_manufacturing</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Info Section -->
+<div class="lg:col-span-6 flex flex-col">
+<h1 class="font-headline-lg text-headline-lg mb-4 text-industrial-navy">Steel Wires &amp; Nails</h1>
+<p class="font-body-lg text-body-lg text-steel-gray mb-8">High-tensile industrial fasteners engineered for structural integrity and long-term durability in heavy-duty construction environments.</p>
+<!-- Spec Highlights -->
+<div class="grid grid-cols-2 gap-6 mb-8 border-y border-steel-gray/10 py-8">
+<div>
+<span class="font-label-caps text-label-caps text-steel-gray block mb-1">MATERIAL</span>
+<span class="font-headline-sm text-headline-sm">Q195 Low Carbon Steel</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-steel-gray block mb-1">TENSILE STRENGTH</span>
+<span class="font-headline-sm text-headline-sm">350-550 N/mm²</span>
+</div>
+</div>
+<!-- Product Features List -->
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Anti-corrosion galvanized coating for extreme environments.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Precision-sharpened points for effortless penetration in hardwood and concrete.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Bulk industrial packaging available (25kg/50kg pails).</span>
+</li>
+</ul>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 mt-auto">
+<button class="flex-1 bg-safety-orange text-white py-4 px-8 font-label-caps text-label-caps rounded flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">assignment</span>
+                        REQUEST TECHNICAL QUOTE
+                    </button>
+<button class="flex-1 border-2 border-industrial-navy text-industrial-navy py-4 px-8 font-label-caps text-label-caps rounded flex items-center justify-center gap-2 hover:bg-industrial-navy hover:text-white transition-all">
+<span class="material-symbols-outlined">download</span>
+                        DOWNLOAD TDS (.PDF)
+                    </button>
+</div>
+</div>
+</div>
+<!-- Technical Data Sheet Section -->
+<section class="mt-24">
+<div class="flex items-center gap-4 mb-10">
+<h2 class="font-headline-md text-headline-md text-industrial-navy">Technical Specifications</h2>
+<div class="h-px flex-1 bg-steel-gray/20"></div>
+</div>
+<div class="overflow-x-auto border border-steel-gray/20 rounded">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-industrial-navy text-white">
+<th class="px-6 py-4 font-label-caps text-label-caps uppercase">Product Category</th>
+<th class="px-6 py-4 font-label-caps text-label-caps uppercase">Standard Lengths</th>
+<th class="px-6 py-4 font-label-caps text-label-caps uppercase">Wire Gauge (BWG)</th>
+<th class="px-6 py-4 font-label-caps text-label-caps uppercase">Coating Type</th>
+<th class="px-6 py-4 font-label-caps text-label-caps uppercase">Certification</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-steel-gray/10">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-5 font-body-md font-bold">Common Round Nails</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">25mm - 150mm</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">BWG 8 - 18</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">Polished / EG</td>
+<td class="px-6 py-5"><span class="bg-surface-container-high px-2 py-1 text-[10px] font-bold rounded">ASTM F1667</span></td>
+</tr>
+<tr class="bg-concrete-white hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-5 font-body-md font-bold">Concrete Steel Nails</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">30mm - 100mm</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">Hardened 3.0mm+</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">Black / Galvanized</td>
+<td class="px-6 py-5"><span class="bg-surface-container-high px-2 py-1 text-[10px] font-bold rounded">ISO 16120</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-5 font-body-md font-bold">Annealed Binding Wire</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">Coil Rolls</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">BWG 20 - 22</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">Soft Black Annealed</td>
+<td class="px-6 py-5"><span class="bg-surface-container-high px-2 py-1 text-[10px] font-bold rounded">AISI 1008</span></td>
+</tr>
+<tr class="bg-concrete-white hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-5 font-body-md font-bold">Finishing Nails</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">15mm - 50mm</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">BWG 15 - 17</td>
+<td class="px-6 py-5 font-body-sm text-steel-gray">Electro-Galvanized</td>
+<td class="px-6 py-5"><span class="bg-surface-container-high px-2 py-1 text-[10px] font-bold rounded">ASTM F1667</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Product Varieties (Bento Style) -->
+<section class="mt-24">
+<h2 class="font-headline-md text-headline-md text-industrial-navy mb-10 text-center">Available Fastener Variants</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-white border border-steel-gray/20 p-8 rounded-lg hover:border-safety-orange transition-all duration-300 group">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-4">construction</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Steel Nails</h3>
+<p class="font-body-sm text-body-sm text-steel-gray mb-6">Standard round head nails for timber-to-timber framing and general carpentry.</p>
+<div class="h-1 w-0 bg-safety-orange group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white border border-steel-gray/20 p-8 rounded-lg hover:border-safety-orange transition-all duration-300 group">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-4">foundation</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Concrete Nails</h3>
+<p class="font-body-sm text-body-sm text-steel-gray mb-6">Heat-treated hardened steel designed for securing structures to masonry or concrete.</p>
+<div class="h-1 w-0 bg-safety-orange group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white border border-steel-gray/20 p-8 rounded-lg hover:border-safety-orange transition-all duration-300 group">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-4">settings_input_composite</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Binding Wires</h3>
+<p class="font-body-sm text-body-sm text-steel-gray mb-6">Flexible annealed wire used for securing rebar and general tie-down applications.</p>
+<div class="h-1 w-0 bg-safety-orange group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white border border-steel-gray/20 p-8 rounded-lg hover:border-safety-orange transition-all duration-300 group">
+<span class="material-symbols-outlined text-4xl text-safety-orange mb-4">security</span>
+<h3 class="font-headline-sm text-headline-sm mb-3">Galvanized Staples</h3>
+<p class="font-body-sm text-body-sm text-steel-gray mb-6">U-shaped fasteners specifically for fencing, insulation, and heavy-duty mesh attachment.</p>
+<div class="h-1 w-0 bg-safety-orange group-hover:w-full transition-all duration-500"></div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-24 bg-industrial-navy rounded-xl p-12 relative overflow-hidden">
+<!-- Subtle background effect -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, #ffffff 1px, transparent 0); background-size: 24px 24px;"></div>
+</div>
+<div class="relative z-10 text-center max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">Require Custom Specs?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-10">Our engineering team can manufacture wire and nails to your specific project requirements, including custom gauges, lengths, and coatings.</p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-safety-orange text-white px-10 py-4 font-label-caps text-label-caps rounded-lg hover:scale-105 transition-transform">
+                        CONTACT SALES ENGINEER
+                    </button>
+<button class="border border-white/30 text-white px-10 py-4 font-label-caps text-label-caps rounded-lg hover:bg-white/10 transition-colors">
+                        VIEW CATALOG
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-industrial-navy border-t border-steel-gray">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<div class="font-headline-sm text-headline-sm font-bold text-safety-orange">Qtrix Global</div>
+<p class="font-body-sm text-body-sm text-steel-gray">Pioneering industrial supplies for modern infrastructure development.</p>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-white block mb-6">PRODUCTS</span>
+<ul class="space-y-3">
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Steel Rebar</a></li>
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Concrete Mix</a></li>
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Safety Gear</a></li>
+<li><a class="font-body-sm text-body-sm text-safety-orange font-bold" href="#">Steel Wires &amp; Nails</a></li>
+</ul>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-white block mb-6">COMPANY</span>
+<ul class="space-y-3">
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">About Us</a></li>
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Projects</a></li>
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Certifications</a></li>
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-white block mb-6">SUPPORT</span>
+<ul class="space-y-3">
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm text-steel-gray hover:text-on-primary hover:underline decoration-safety-orange" href="#">Technical Support</a></li>
+</ul>
+</div>
+</div>
+<div class="px-margin-desktop py-6 border-t border-steel-gray/20 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-sm text-body-sm text-steel-gray">© 2024 Qtrix Global. All rights reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-steel-gray cursor-pointer hover:text-safety-orange">public</span>
+<span class="material-symbols-outlined text-steel-gray cursor-pointer hover:text-safety-orange">partner_exchange</span>
+<span class="material-symbols-outlined text-steel-gray cursor-pointer hover:text-safety-orange">verified</span>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for thumbnail gallery
+        document.querySelectorAll('.aspect-square.cursor-pointer').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                document.querySelectorAll('.aspect-square.cursor-pointer').forEach(t => t.classList.remove('border-safety-orange'));
+                document.querySelectorAll('.aspect-square.cursor-pointer').forEach(t => t.classList.add('border-steel-gray/20'));
+                this.classList.remove('border-steel-gray/20');
+                this.classList.add('border-2', 'border-safety-orange');
+            });
+        });
+
+        // Sticky Header shrink effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.querySelector('div').classList.remove('py-4');
+                nav.querySelector('div').classList.add('py-2');
+            } else {
+                nav.classList.remove('py-2');
+                nav.querySelector('div').classList.remove('py-2');
+                nav.querySelector('div').classList.add('py-4');
+            }
+        });
+    </script>
+</body></html>
