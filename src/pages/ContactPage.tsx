@@ -2,7 +2,9 @@ import { Headphones, Mail, MapPin, Phone } from 'lucide-react'
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { Container } from '../components/ui/Container'
+import { LazyImage } from '../components/ui/LazyImage'
 import { PageHero } from '../components/ui/PageHero'
+import { Reveal } from '../components/ui/Reveal'
 
 export function ContactPage() {
   const [searchParams] = useSearchParams()
@@ -27,27 +29,29 @@ export function ContactPage() {
 
       <section className="bg-concrete-white py-14 md:py-20">
         <Container className="grid items-start gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(300px,1fr)]">
-          <form
-            className="surface-card p-6 md:p-10"
-            onSubmit={(event) => {
-              event.preventDefault()
-              setSubmitted(true)
-              event.currentTarget.reset()
-            }}
-          >
-            <h2 className="mb-8 font-heading text-3xl font-bold text-industrial-navy md:text-4xl">Send an Inquiry</h2>
-            <div className="grid gap-6 md:grid-cols-2">
-              <label className="form-label">Full Name<input className="form-input" name="name" placeholder="John Doe" required /></label>
-              <label className="form-label">Email Address<input className="form-input" name="email" placeholder="john@company.com" required type="email" /></label>
-              <label className="form-label">Subject<select className="form-input" defaultValue={defaultSubject} name="subject">{subjects.map((subject) => <option key={subject}>{subject}</option>)}</select></label>
-              <label className="form-label">Phone Number<input className="form-input" name="phone" placeholder="+974 XXXX XXXX" type="tel" /></label>
-              <label className="form-label md:col-span-2">Message<textarea className="form-input min-h-40 resize-y" name="message" placeholder="Describe your project or product requirements..." required /></label>
-            </div>
-            <button className="button-link mt-7 bg-safety-orange text-white hover:bg-secondary" type="submit">Submit Inquiry</button>
-            {submitted && <p className="mt-5 border-l-4 border-safety-orange bg-surface-container-low p-4 text-sm text-industrial-navy" role="status">Thank you. Your inquiry has been prepared for the Qtrix Global sales team.</p>}
-          </form>
+          <Reveal>
+            <form
+              className="surface-card p-6 md:p-10"
+              onSubmit={(event) => {
+                event.preventDefault()
+                setSubmitted(true)
+                event.currentTarget.reset()
+              }}
+            >
+              <h2 className="mb-8 font-heading text-3xl font-bold text-industrial-navy md:text-4xl">Send an Inquiry</h2>
+              <div className="grid gap-6 md:grid-cols-2">
+                <label className="form-label">Full Name<input className="form-input" name="name" placeholder="John Doe" required /></label>
+                <label className="form-label">Email Address<input className="form-input" name="email" placeholder="john@company.com" required type="email" /></label>
+                <label className="form-label">Subject<select className="form-input" defaultValue={defaultSubject} name="subject">{subjects.map((subject) => <option key={subject}>{subject}</option>)}</select></label>
+                <label className="form-label">Phone Number<input className="form-input" name="phone" placeholder="+974 XXXX XXXX" type="tel" /></label>
+                <label className="form-label md:col-span-2">Message<textarea className="form-input min-h-40 resize-y" name="message" placeholder="Describe your project or product requirements..." required /></label>
+              </div>
+              <button className="button-link mt-7 bg-safety-orange text-white hover:bg-secondary" type="submit">Submit Inquiry</button>
+              {submitted && <p className="mt-5 border-l-4 border-safety-orange bg-surface-container-low p-4 text-sm text-industrial-navy" role="status">Thank you. Your inquiry has been prepared for the Qtrix Global sales team.</p>}
+            </form>
+          </Reveal>
 
-          <aside className="space-y-6">
+          <Reveal as="aside" className="space-y-6" delay={140}>
             <div className="overflow-hidden rounded-lg bg-industrial-navy p-7 text-white shadow-lg md:p-8">
               <h2 className="mb-6 border-b border-safety-orange pb-4 font-heading text-2xl font-semibold">Our Presence</h2>
               <div className="space-y-7">
@@ -66,20 +70,20 @@ export function ContactPage() {
             </form>
 
             <div className="relative h-72 overflow-hidden rounded-lg border border-outline-variant shadow-sm">
-              <img className="size-full object-cover grayscale" src="/assets/contact-map.jpg" alt="Map visualization of the Doha office location." />
+              <LazyImage className="size-full object-cover grayscale" src="/assets/contact-map.jpg" alt="Map visualization of the Doha office location." />
               <div className="absolute bottom-4 left-4 bg-white p-3 shadow"><p className="font-label">Office Coordinates</p><p className="text-sm font-bold">25.3548 N, 51.5329 E</p></div>
             </div>
-          </aside>
+          </Reveal>
         </Container>
       </section>
 
       <section className="border-t border-outline-variant bg-white py-14 text-center">
-        <Container>
+        <Container><Reveal>
           <h2 className="mb-8 font-label text-steel-gray">Trusted by global standards</h2>
           <div className="flex flex-wrap justify-center gap-5 md:gap-10">
             {['ISO 9001', 'FSC', 'CE', 'EN 397'].map((standard) => <div className="flex min-h-16 min-w-32 items-center justify-center rounded-lg border border-outline-variant bg-concrete-white px-5 font-heading font-bold text-steel-gray shadow-sm" key={standard}>{standard}</div>)}
           </div>
-        </Container>
+        </Reveal></Container>
       </section>
     </>
   )

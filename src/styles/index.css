@@ -147,6 +147,29 @@
     font-weight: 700;
   }
 
+  .mobile-nav-link {
+    display: flex;
+    min-height: 3.5rem;
+    align-items: center;
+    gap: 0.875rem;
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-industrial-navy);
+    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link-active {
+    color: var(--color-safety-orange);
+    background: white;
+  }
+
+  .mobile-nav-link-active {
+    box-shadow: inset 3px 0 0 var(--color-safety-orange), 0 3px 10px rgb(15 23 42 / 0.06);
+  }
+
   .icon-button {
     display: inline-flex;
     width: 2.75rem;
@@ -353,6 +376,24 @@
   background: linear-gradient(to right, rgb(15 23 42 / 0.94) 0%, rgb(15 23 42 / 0.72) 48%, rgb(15 23 42 / 0.42) 100%);
 }
 
+.mobile-menu-backdrop {
+  animation: mobile-menu-backdrop 250ms ease both;
+}
+
+.mobile-menu-panel {
+  animation: mobile-menu-panel 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes mobile-menu-backdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes mobile-menu-panel {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
 .blueprint-grid::before {
   position: absolute;
   inset: 0;
@@ -370,6 +411,75 @@
 .blueprint-dark {
   background-image: radial-gradient(rgb(255 255 255 / 0.12) 0.75px, transparent 0.75px);
   background-size: 24px 24px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition: opacity 850ms ease var(--reveal-delay, 0ms), transform 850ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-item {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition: opacity 750ms ease var(--stat-delay, 0ms), transform 750ms cubic-bezier(0.22, 1, 0.36, 1) var(--stat-delay, 0ms);
+}
+
+.stat-item-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-enter {
+  opacity: 0;
+  animation: hero-enter 950ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-enter-1 { animation-delay: 120ms; }
+.hero-enter-2 { animation-delay: 240ms; }
+.hero-enter-3 { animation-delay: 360ms; }
+.hero-enter-4 { animation-delay: 480ms; }
+
+.lazy-image {
+  opacity: 0;
+  transform: scale(1.015);
+  transition: opacity 1200ms ease, filter 1600ms ease, transform 1200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lazy-image-loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.lazy-image-colorized {
+  filter: grayscale(0);
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .product-card-overlay {
+    background-color: rgb(0 0 0 / 0.05);
+  }
+
+  .product-card-image:active,
+  .catalog-card-image:active {
+    transform: scale(1.02);
+  }
 }
 
 @media (min-width: 768px) {
@@ -395,5 +505,13 @@
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .reveal,
+  .stat-item,
+  .hero-enter,
+  .lazy-image {
+    opacity: 1;
+    transform: none;
   }
 }

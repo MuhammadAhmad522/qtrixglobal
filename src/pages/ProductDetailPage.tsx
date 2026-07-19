@@ -5,6 +5,8 @@ import { TechnicalTable } from '../components/TechnicalTable'
 import { Breadcrumbs } from '../components/ui/Breadcrumbs'
 import { ButtonLink } from '../components/ui/ButtonLink'
 import { Container } from '../components/ui/Container'
+import { LazyImage } from '../components/ui/LazyImage'
+import { Reveal } from '../components/ui/Reveal'
 import { getProductBySlug } from '../data/productDetails'
 import { products } from '../data/siteContent'
 
@@ -45,9 +47,9 @@ export function ProductDetailPage() {
       <Container className="py-10 md:py-12">
         <Breadcrumbs current={product.name} parent={{ label: 'Products', href: '/products' }} />
         <section className="grid items-start gap-10 lg:grid-cols-2 lg:gap-12">
-          <div>
-            <div className="surface-card relative flex aspect-square max-h-[620px] items-center justify-center p-5 md:p-10">
-              <img className="max-h-full max-w-full object-contain transition-transform duration-500 hover:scale-105" src={selectedImage.src} alt={selectedImage.alt} />
+          <Reveal>
+            <div className="surface-card relative aspect-[16/10] overflow-hidden bg-surface-container-high">
+              <img className="size-full object-cover transition-transform duration-500 hover:scale-105" decoding="async" src={selectedImage.src} alt={selectedImage.alt} />
               <span className="absolute left-4 top-4 bg-industrial-navy px-3 py-1 font-label text-white">{product.badge}</span>
               {galleryImages.length > 1 && (
                 <>
@@ -61,18 +63,18 @@ export function ProductDetailPage() {
                 <button
                   aria-label={`View product image ${index + 1}`}
                   aria-pressed={selectedImageIndex === index}
-                  className={`aspect-square overflow-hidden rounded-md border bg-white p-2 shadow-sm transition-colors hover:border-safety-orange ${selectedImageIndex === index ? 'border-2 border-safety-orange' : 'border-outline-variant'}`}
+                  className={`aspect-[16/10] overflow-hidden rounded-md border bg-surface-container-high shadow-sm transition-colors hover:border-safety-orange ${selectedImageIndex === index ? 'border-2 border-safety-orange' : 'border-outline-variant'}`}
                   key={image.src}
                   onClick={() => setSelectedImageIndex(index)}
                   type="button"
                 >
-                  <img className={`size-full object-cover transition ${selectedImageIndex === index ? 'grayscale-0' : 'grayscale hover:grayscale-0'}`} src={image.src} alt="" />
+                  <LazyImage className={`gallery-thumbnail-image size-full object-cover transition ${selectedImageIndex === index ? 'grayscale-0' : 'grayscale hover:grayscale-0'}`} src={image.src} alt="" />
                 </button>
               ))}
             </div>
-          </div>
+          </Reveal>
 
-          <div className="lg:py-4">
+          <Reveal className="lg:py-4" delay={140}>
             <p className="mb-3 font-label text-safety-orange">{product.category} materials</p>
             <h1 className="mb-5 font-heading text-4xl font-bold leading-tight text-industrial-navy md:text-5xl">{product.name}</h1>
             <p className="mb-8 text-base leading-7 text-steel-gray md:text-body-lg">{product.description}</p>
@@ -120,20 +122,22 @@ export function ProductDetailPage() {
                 View Technical Data
               </ButtonLink>
             </div>
-          </div>
+          </Reveal>
         </section>
       </Container>
 
       <section className="bg-surface-container-low py-16 md:py-20" id="specifications">
         <Container>
-          <h2 className="mb-8 font-heading text-3xl font-bold text-industrial-navy md:text-4xl">Technical Specifications</h2>
-          <TechnicalTable headers={product.specificationHeaders} rows={product.specificationRows} />
+          <Reveal>
+            <h2 className="mb-8 font-heading text-3xl font-bold text-industrial-navy md:text-4xl">Technical Specifications</h2>
+            <TechnicalTable headers={product.specificationHeaders} rows={product.specificationRows} />
+          </Reveal>
         </Container>
       </section>
 
       <section className="bg-white py-16 md:py-20">
         <Container>
-          <div className="mb-10 max-w-2xl">
+          <Reveal><div className="mb-10 max-w-2xl">
             <p className="mb-3 font-label text-safety-orange">Engineered for the field</p>
             <h2 className="font-heading text-3xl font-bold text-industrial-navy md:text-4xl">Performance &amp; Application</h2>
           </div>
@@ -145,17 +149,17 @@ export function ProductDetailPage() {
                 <p className={index === 0 ? 'text-white/60' : 'text-steel-gray'}>{description}</p>
               </article>
             ))}
-          </div>
+          </div></Reveal>
         </Container>
       </section>
 
       <section className="bg-concrete-white py-16 md:py-20">
         <Container>
-          <h2 className="mb-8 font-heading text-3xl font-bold text-industrial-navy">Complementary Project Assets</h2>
+          <Reveal><h2 className="mb-8 font-heading text-3xl font-bold text-industrial-navy">Complementary Project Assets</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {related.map((item) => (
               <Link className="surface-card surface-card-interactive group" to={`/products/${item.slug}`} key={item.slug}>
-                <div className="h-52 overflow-hidden"><img className="size-full object-cover grayscale transition duration-500 group-hover:scale-105 group-hover:grayscale-0" src={item.catalogImage ?? item.image} alt={item.alt} /></div>
+                <div className="h-52 overflow-hidden"><LazyImage className="related-product-image size-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0" src={item.catalogImage ?? item.image} alt={item.alt} /></div>
                 <div className="p-5">
                   <p className="mb-2 font-label text-safety-orange">{item.category}</p>
                   <div className="flex items-center justify-between gap-3">
@@ -165,15 +169,17 @@ export function ProductDetailPage() {
                 </div>
               </Link>
             ))}
-          </div>
+          </div></Reveal>
         </Container>
       </section>
 
       <section className="blueprint-dark bg-industrial-navy py-16 text-center text-white md:py-20">
         <Container>
-          <h2 className="mb-5 font-heading text-3xl font-bold md:text-5xl">Require Custom Specs?</h2>
-          <p className="mx-auto mb-8 max-w-2xl text-white/60">Our engineering team can prepare custom configurations, volume pricing, and technical submittal packages for your project.</p>
-          <ButtonLink href={`/contact?subject=${encodeURIComponent(`${product.name} - ${selectedVariant} custom specification`)}`}>Contact Sales Engineer</ButtonLink>
+          <Reveal>
+            <h2 className="mb-5 font-heading text-3xl font-bold md:text-5xl">Require Custom Specs?</h2>
+            <p className="mx-auto mb-8 max-w-2xl text-white/60">Our engineering team can prepare custom configurations, volume pricing, and technical submittal packages for your project.</p>
+            <ButtonLink href={`/contact?subject=${encodeURIComponent(`${product.name} - ${selectedVariant} custom specification`)}`}>Contact Sales Engineer</ButtonLink>
+          </Reveal>
         </Container>
       </section>
     </>

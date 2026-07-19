@@ -4,7 +4,9 @@ import { Link, useSearchParams } from 'react-router-dom'
 import { TechnicalTable } from '../components/TechnicalTable'
 import { ButtonLink } from '../components/ui/ButtonLink'
 import { Container } from '../components/ui/Container'
+import { LazyImage } from '../components/ui/LazyImage'
 import { PageHero } from '../components/ui/PageHero'
+import { Reveal } from '../components/ui/Reveal'
 import { getProductBySlug } from '../data/productDetails'
 import { products } from '../data/siteContent'
 import type { ProductFilter } from '../types/content'
@@ -89,11 +91,11 @@ export function ProductsPage() {
       </section>
 
       <Container className="py-16 md:py-20" id="catalogue">
-        <div className={view === 'grid' ? 'grid gap-6 md:grid-cols-2 lg:grid-cols-3' : 'grid gap-5'}>
+        <Reveal className={view === 'grid' ? 'grid gap-6 md:grid-cols-2 lg:grid-cols-3' : 'grid gap-5'}>
           {filteredProducts.map((product) => (
             <article className={`catalog-card group ${view === 'list' ? 'sm:grid sm:grid-cols-[280px_1fr]' : ''}`} key={product.slug}>
               <div className={`relative overflow-hidden ${view === 'list' ? 'h-60 sm:h-full' : 'h-64'}`}>
-                <img className="size-full object-cover grayscale transition duration-500 group-hover:scale-105 group-hover:grayscale-0" src={product.catalogImage ?? product.image} alt={product.alt} />
+                <LazyImage className="catalog-card-image size-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0" src={product.catalogImage ?? product.image} alt={product.alt} />
                 <span className="absolute left-4 top-4 bg-industrial-navy px-3 py-1 font-label text-white">{product.category}</span>
               </div>
               <div className="flex flex-col p-6">
@@ -108,28 +110,41 @@ export function ProductsPage() {
               </div>
             </article>
           ))}
-        </div>
+        </Reveal>
         {filteredProducts.length === 0 && (
           <div className="surface-card px-6 py-16 text-center">
             <h2 className="font-heading text-2xl font-semibold text-industrial-navy">No matching products</h2>
-            <p className="mt-2 text-steel-gray">Try a different material name or category.</p>
+            <p className="mt-2 text-steel-gray">
+              {query ? <>We couldn&apos;t find a product matching &ldquo;{query}&rdquo;.</> : 'Try a different product category.'}
+            </p>
+            <button
+              className="button-link mt-6 bg-industrial-navy text-white hover:bg-black"
+              onClick={() => updateParams({ category: 'All', q: '' })}
+              type="button"
+            >
+              Clear search
+            </button>
           </div>
         )}
       </Container>
 
       <section className="bg-industrial-navy py-16 text-white md:py-20" id="standards">
         <Container>
-          <h2 className="mb-3 font-heading text-3xl font-bold uppercase md:text-5xl">Technical Standards</h2>
-          <p className="mb-10 max-w-2xl text-white/60">All Qtrix Global products adhere to rigorous international safety and durability benchmarks.</p>
-          <TechnicalTable headers={['Category', 'Standard Certification', 'Origin', 'Load Rating']} rows={standards} />
+          <Reveal>
+            <h2 className="mb-3 font-heading text-3xl font-bold uppercase md:text-5xl">Technical Standards</h2>
+            <p className="mb-10 max-w-2xl text-white/60">All Qtrix Global products adhere to rigorous international safety and durability benchmarks.</p>
+            <TechnicalTable headers={['Category', 'Standard Certification', 'Origin', 'Load Rating']} rows={standards} />
+          </Reveal>
         </Container>
       </section>
 
       <section className="border-y border-outline-variant bg-white py-20 text-center">
         <Container>
-          <h2 className="mb-5 font-heading text-3xl font-bold uppercase text-industrial-navy md:text-5xl">Need a custom technical submittal?</h2>
-          <p className="mx-auto mb-8 max-w-2xl text-steel-gray">Our engineering team can provide detailed data sheets and CAD drawings for your specific project requirements.</p>
-          <ButtonLink href="/contact?subject=Technical%20submittal" variant="dark">Consult an Expert</ButtonLink>
+          <Reveal>
+            <h2 className="mb-5 font-heading text-3xl font-bold uppercase text-industrial-navy md:text-5xl">Need a custom technical submittal?</h2>
+            <p className="mx-auto mb-8 max-w-2xl text-steel-gray">Our engineering team can provide detailed data sheets and CAD drawings for your specific project requirements.</p>
+            <ButtonLink href="/contact?subject=Technical%20submittal" variant="dark">Consult an Expert</ButtonLink>
+          </Reveal>
         </Container>
       </section>
     </>

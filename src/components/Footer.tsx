@@ -2,6 +2,7 @@ import { AtSign, Phone, Send, Share2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { footerGroups } from '../data/siteContent'
 import { Container } from './ui/Container'
+import { LazyImage } from './ui/LazyImage'
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
       <Container className="grid gap-12 pb-16 sm:grid-cols-2 md:grid-cols-4 md:gap-6 md:pb-20">
         <div className="flex flex-col items-start gap-6">
           <Link to="/" aria-label="Qtrix Global home">
-            <img className="h-14 w-20 object-cover" src="/assets/qtrix-logo.jpg" alt="Qtrix Global" />
+            <LazyImage className="h-14 w-20 object-cover" src="/assets/qtrix-logo.jpg" alt="Qtrix Global" />
           </Link>
           <p className="text-sm leading-5 text-concrete-white/60">
             The industry standard for premium construction supplies. Building trust through material excellence since 2024.

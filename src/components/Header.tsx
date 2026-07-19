@@ -1,14 +1,22 @@
-import { Menu, Search, X } from 'lucide-react'
+import { ArrowRight, Building2, Home, Mail, Menu, PackageSearch, Phone, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { navigation } from '../data/siteContent'
+import { ProductSearch } from './ProductSearch'
 import { ButtonLink } from './ui/ButtonLink'
 import { Container } from './ui/Container'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const navigate = useNavigate()
+  const { pathname } = useLocation()
+
+  const mobileNavigationIcons = {
+    '/': Home,
+    '/products': PackageSearch,
+    '/about': Building2,
+    '/contact': Mail,
+  }
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
@@ -23,6 +31,27 @@ export function Header() {
     mediaQuery.addEventListener('change', closeMenu)
     return () => mediaQuery.removeEventListener('change', closeMenu)
   }, [])
+
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    if (!isMenuOpen) return
+
+    const previousOverflow = document.body.style.overflow
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsMenuOpen(false)
+    }
+
+    document.body.style.overflow = 'hidden'
+    document.addEventListener('keydown', closeOnEscape)
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.removeEventListener('keydown', closeOnEscape)
+    }
+  }, [isMenuOpen])
 
   return (
     <header
@@ -57,33 +86,7 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-3">
-          <form
-            className="relative hidden lg:block"
-            role="search"
-            onSubmit={(event) => {
-              event.preventDefault()
-              const query = new FormData(event.currentTarget).get('query')?.toString().trim()
-              navigate(query ? `/products?q=${encodeURIComponent(query)}` : '/products')
-            }}
-          >
-            <label className="sr-only" htmlFor="material-search">
-              Search materials
-            </label>
-            <input
-              className="h-10 w-64 border border-outline-variant bg-surface-container-low px-4 pr-10 text-sm outline-none transition-colors focus:border-safety-orange"
-              id="material-search"
-              name="query"
-              placeholder="Search Materials..."
-              type="search"
-            />
-            <button
-              aria-label="Search materials"
-              className="absolute right-0 top-0 flex size-10 items-center justify-center bg-transparent text-steel-gray transition-colors hover:text-safety-orange"
-              type="submit"
-            >
-              <Search aria-hidden="true" className="size-4" />
-            </button>
-          </form>
+          <ProductSearch className="hidden w-64 lg:block" />
           <ButtonLink className="hidden px-6 py-3 sm:inline-flex" href="/contact">
             Get a Quote
           </ButtonLink>
@@ -91,7 +94,7 @@ export function Header() {
             aria-controls="mobile-navigation"
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? 'Close navigation' : 'Open navigation'}
-            className="icon-button md:hidden"
+            className={`icon-button md:hidden ${isMenuOpen ? 'border-industrial-navy bg-industrial-navy text-white' : 'bg-white'}`}
             onClick={() => setIsMenuOpen((open) => !open)}
             type="button"
           >
@@ -100,26 +103,58 @@ export function Header() {
         </div>
       </Container>
 
-      <div
-        className={`absolute inset-x-0 top-20 border-b border-outline-variant bg-concrete-white px-4 py-5 shadow-md md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}
-        id="mobile-navigation"
-      >
-        <nav className="flex flex-col" aria-label="Mobile navigation">
-          {navigation.map((item) => (
-            <NavLink
-              className="border-b border-outline-variant/60 px-2 py-4 font-label text-industrial-navy last:border-0 hover:text-safety-orange"
-              to={item.href}
-              key={item.label}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {item.label}
-            </NavLink>
-          ))}
-          <ButtonLink className="mt-4 justify-center sm:hidden" href="/contact">
-            Get a Quote
-          </ButtonLink>
-        </nav>
-      </div>
+      {isMenuOpen && (
+        <div className="fixed inset-x-0 bottom-0 top-20 z-50 md:hidden" id="mobile-navigation">
+          <button
+            aria-label="Close navigation"
+            className="mobile-menu-backdrop absolute inset-0 rounded-none bg-industrial-navy/45 backdrop-blur-[2px]"
+            onClick={() => setIsMenuOpen(false)}
+            type="button"
+          />
+          <aside className="mobile-menu-panel absolute bottom-0 right-0 top-0 flex w-[min(88vw,360px)] flex-col overflow-y-auto border-l border-outline-variant bg-concrete-white shadow-2xl">
+            <div className="border-b border-outline-variant/70 px-5 py-5">
+              <div className="mb-4">
+                <p className="font-label text-safety-orange">Qtrix Global</p>
+                <p className="mt-1 font-heading text-xl font-semibold text-industrial-navy">Menu</p>
+              </div>
+              <ProductSearch onNavigate={() => setIsMenuOpen(false)} placeholder="Search products..." />
+            </div>
+
+            <nav className="px-3 py-4" aria-label="Mobile navigation">
+              {navigation.map((item) => {
+                const Icon = mobileNavigationIcons[item.href as keyof typeof mobileNavigationIcons]
+                return (
+                  <NavLink
+                    className={({ isActive }) => `mobile-nav-link ${isActive ? 'mobile-nav-link-active' : ''}`}
+                    end={item.href === '/'}
+                    to={item.href}
+                    key={item.label}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Icon aria-hidden="true" className="size-5 shrink-0" />
+                    <span className="flex-1">{item.label}</span>
+                    <ArrowRight aria-hidden="true" className="size-4 shrink-0" />
+                  </NavLink>
+                )
+              })}
+            </nav>
+
+            <div className="mt-auto border-t border-outline-variant/70 bg-surface-container-low p-5">
+              <ButtonLink className="mb-5 w-full justify-center" href="/contact">
+                Get a Quote
+                <ArrowRight aria-hidden="true" className="size-4" />
+              </ButtonLink>
+              <p className="mb-3 font-label text-steel-gray">Direct assistance</p>
+              <a className="flex items-center gap-3 text-sm font-semibold text-industrial-navy hover:text-safety-orange" href="tel:+97433029206">
+                <span className="flex size-9 items-center justify-center rounded-md bg-white text-safety-orange shadow-sm">
+                  <Phone aria-hidden="true" className="size-4" />
+                </span>
+                +974 3302 9206
+              </a>
+            </div>
+          </aside>
+        </div>
+      )}
     </header>
   )
 }

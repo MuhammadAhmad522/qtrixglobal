@@ -1,7 +1,9 @@
 import { Boxes, Globe2, Lightbulb, ShieldCheck, Truck, Wrench } from 'lucide-react'
 import { ButtonLink } from '../components/ui/ButtonLink'
 import { Container } from '../components/ui/Container'
+import { LazyImage } from '../components/ui/LazyImage'
 import { PageHero } from '../components/ui/PageHero'
+import { Reveal } from '../components/ui/Reveal'
 
 const values = [
   { title: 'Reliability', description: 'Our fulfillment systems eliminate downtime through predictable scheduling and clear project communication.', icon: ShieldCheck },
@@ -26,7 +28,7 @@ export function AboutPage() {
       />
 
       <section className="bg-white py-16 md:py-20">
-        <Container className="grid items-center gap-12 lg:grid-cols-2">
+        <Container><Reveal className="grid items-center gap-12 lg:grid-cols-2">
           <div>
             <h2 className="mb-6 font-heading text-4xl font-bold text-industrial-navy md:text-5xl">Our Mission</h2>
             <p className="mb-8 text-base leading-7 text-steel-gray md:text-body-lg">At Qtrix Global, our mission is to streamline the global construction supply chain through unwavering commitment to quality and technical excellence. We bridge the gap between complex engineering requirements and on-site execution.</p>
@@ -36,26 +38,26 @@ export function AboutPage() {
             </div>
           </div>
           <div className="grid grid-cols-2 items-center gap-4">
-            <img className="h-80 w-full rounded-lg object-cover grayscale shadow-lg" src="/assets/about-steel-beams.jpg" alt="Precision steel beams and industrial rivets." />
-            <img className="h-64 w-full rounded-lg object-cover grayscale shadow-lg" src="/assets/about-site.jpg" alt="Organized large-scale construction site." />
+            <LazyImage className="h-80 w-full rounded-lg object-cover grayscale shadow-lg" src="/assets/about-steel-beams.jpg" alt="Precision steel beams and industrial rivets." />
+            <LazyImage className="h-64 w-full rounded-lg object-cover grayscale shadow-lg" src="/assets/about-site.jpg" alt="Organized large-scale construction site." />
           </div>
-        </Container>
+        </Reveal></Container>
       </section>
 
       <section className="bg-surface-container py-16 md:py-20">
         <Container>
-          <div className="mb-10 text-center"><p className="mb-3 font-label text-safety-orange">The Qtrix standard</p><h2 className="font-heading text-4xl font-bold text-industrial-navy">Core Values That Drive Us</h2></div>
+          <Reveal><div className="mb-10 text-center"><p className="mb-3 font-label text-safety-orange">The Qtrix standard</p><h2 className="font-heading text-4xl font-bold text-industrial-navy">Core Values That Drive Us</h2></div>
           <div className="grid gap-6 md:grid-cols-3">
             {values.map(({ description, icon: Icon, title }) => (
               <article className="surface-card surface-card-interactive p-7" key={title}><div className="mb-7 flex size-11 items-center justify-center rounded-md bg-industrial-navy text-safety-orange shadow-sm"><Icon className="size-5" /></div><h3 className="mb-3 font-heading text-2xl font-semibold text-industrial-navy">{title}</h3><p className="text-steel-gray">{description}</p></article>
             ))}
-          </div>
+          </div></Reveal>
         </Container>
       </section>
 
       <section className="bg-white py-16 md:py-20" id="projects">
-        <Container className="grid items-center gap-12 lg:grid-cols-2">
-          <img className="aspect-square w-full rounded-lg object-cover grayscale shadow-lg" src="/assets/about-logistics.jpg" alt="Warehouse manager coordinating industrial inventory." />
+        <Container><Reveal className="grid items-center gap-12 lg:grid-cols-2">
+          <LazyImage className="aspect-square w-full rounded-lg object-cover grayscale shadow-lg" src="/assets/about-logistics.jpg" alt="Warehouse manager coordinating industrial inventory." />
           <div>
             <h2 className="mb-8 font-heading text-4xl font-bold text-industrial-navy md:text-5xl">Why Leading Contractors Choose Us</h2>
             <div className="space-y-7">
@@ -64,21 +66,21 @@ export function AboutPage() {
               ))}
             </div>
           </div>
-        </Container>
+        </Reveal></Container>
       </section>
 
       <section className="bg-industrial-navy py-12 text-white">
-        <Container className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+        <Container><Reveal className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
           {[['15k+', 'Projects supplied'], ['24/7', 'Logistics support'], ['120+', 'Partner brands'], ['99%', 'On-time delivery']].map(([value, label]) => <div key={label}><p className="font-heading text-4xl font-bold text-safety-orange">{value}</p><p className="font-label text-white/60">{label}</p></div>)}
-        </Container>
+        </Reveal></Container>
       </section>
 
       <section className="bg-concrete-white py-16 md:py-20">
-        <Container className="surface-card px-6 py-12 text-center md:px-12">
+        <Container><Reveal className="surface-card px-6 py-12 text-center md:px-12">
           <h2 className="mb-4 font-heading text-3xl font-bold text-industrial-navy md:text-4xl">Ready to Scale Your Construction Logistics?</h2>
           <p className="mx-auto mb-8 max-w-2xl text-steel-gray">Connect with our procurement experts to discuss your requirements and receive a custom quote within 24 hours.</p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row"><ButtonLink href="/contact">Get Started</ButtonLink><ButtonLink href="/products" variant="outline-dark">Browse Catalogue</ButtonLink></div>
-        </Container>
+        </Reveal></Container>
       </section>
     </>
   )

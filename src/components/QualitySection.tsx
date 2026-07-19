@@ -1,11 +1,12 @@
 import { qualityFeatures } from '../data/siteContent'
 import { Container } from './ui/Container'
+import { Reveal } from './ui/Reveal'
 
 export function QualitySection() {
   return (
     <section className="scroll-mt-20 bg-concrete-white py-20 md:py-24" id="quality">
       <Container className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
-        <div className="order-2 lg:order-1">
+        <Reveal className="order-2 lg:order-1">
           <div className="relative flex min-h-64 items-center pb-8 pr-0 sm:min-h-80 sm:pr-8 lg:pb-0">
             <div className="absolute left-0 right-16 top-1/2 h-3 -translate-y-1/2 bg-surface-dim" aria-hidden="true" />
             <div className="relative z-20 ml-auto max-w-sm rounded-lg border-l-4 border-safety-orange bg-industrial-navy p-6 shadow-xl sm:p-8">
@@ -15,9 +16,9 @@ export function QualitySection() {
               </p>
             </div>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="order-1 lg:order-2">
+        <Reveal className="order-1 lg:order-2" delay={120}>
           <p className="mb-4 font-label text-safety-orange">Commitment to excellence</p>
           <h2 className="section-title mb-8">Quality &amp; Sustainability</h2>
           <div className="space-y-8">
@@ -33,7 +34,7 @@ export function QualitySection() {
               </article>
             ))}
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   )
