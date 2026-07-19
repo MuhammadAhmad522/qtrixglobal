@@ -31,13 +31,13 @@ export function AboutPage() {
             <h2 className="mb-6 font-heading text-4xl font-bold text-industrial-navy md:text-5xl">Our Mission</h2>
             <p className="mb-8 text-base leading-7 text-steel-gray md:text-body-lg">At Qtrix Global, our mission is to streamline the global construction supply chain through unwavering commitment to quality and technical excellence. We bridge the gap between complex engineering requirements and on-site execution.</p>
             <div className="grid gap-4">
-              <div className="flex gap-4 border border-outline-variant p-5"><ShieldCheck className="size-6 shrink-0 text-safety-orange" /><div><h3 className="font-bold text-industrial-navy">Engineering Excellence</h3><p className="text-sm text-steel-gray">Supplies that meet rigorous ISO standards and technical specifications.</p></div></div>
-              <div className="flex gap-4 border border-outline-variant p-5"><Truck className="size-6 shrink-0 text-safety-orange" /><div><h3 className="font-bold text-industrial-navy">Reliable Logistics</h3><p className="text-sm text-steel-gray">Timely delivery to remote and challenging project sites worldwide.</p></div></div>
+              <div className="rounded-lg border border-outline-variant bg-concrete-white p-5 shadow-sm"><div className="flex gap-4"><ShieldCheck className="size-6 shrink-0 text-safety-orange" /><div><h3 className="font-bold text-industrial-navy">Engineering Excellence</h3><p className="text-sm text-steel-gray">Supplies that meet rigorous ISO standards and technical specifications.</p></div></div></div>
+              <div className="rounded-lg border border-outline-variant bg-concrete-white p-5 shadow-sm"><div className="flex gap-4"><Truck className="size-6 shrink-0 text-safety-orange" /><div><h3 className="font-bold text-industrial-navy">Reliable Logistics</h3><p className="text-sm text-steel-gray">Timely delivery to remote and challenging project sites worldwide.</p></div></div></div>
             </div>
           </div>
           <div className="grid grid-cols-2 items-center gap-4">
-            <img className="h-80 w-full object-cover grayscale" src="/assets/about-steel-beams.jpg" alt="Precision steel beams and industrial rivets." />
-            <img className="h-64 w-full object-cover grayscale" src="/assets/about-site.jpg" alt="Organized large-scale construction site." />
+            <img className="h-80 w-full rounded-lg object-cover grayscale shadow-lg" src="/assets/about-steel-beams.jpg" alt="Precision steel beams and industrial rivets." />
+            <img className="h-64 w-full rounded-lg object-cover grayscale shadow-lg" src="/assets/about-site.jpg" alt="Organized large-scale construction site." />
           </div>
         </Container>
       </section>
@@ -47,7 +47,7 @@ export function AboutPage() {
           <div className="mb-10 text-center"><p className="mb-3 font-label text-safety-orange">The Qtrix standard</p><h2 className="font-heading text-4xl font-bold text-industrial-navy">Core Values That Drive Us</h2></div>
           <div className="grid gap-6 md:grid-cols-3">
             {values.map(({ description, icon: Icon, title }) => (
-              <article className="border border-outline-variant/50 bg-white p-7" key={title}><div className="mb-7 flex size-11 items-center justify-center bg-industrial-navy text-safety-orange"><Icon className="size-5" /></div><h3 className="mb-3 font-heading text-2xl font-semibold text-industrial-navy">{title}</h3><p className="text-steel-gray">{description}</p></article>
+              <article className="surface-card surface-card-interactive p-7" key={title}><div className="mb-7 flex size-11 items-center justify-center rounded-md bg-industrial-navy text-safety-orange shadow-sm"><Icon className="size-5" /></div><h3 className="mb-3 font-heading text-2xl font-semibold text-industrial-navy">{title}</h3><p className="text-steel-gray">{description}</p></article>
             ))}
           </div>
         </Container>
@@ -55,7 +55,7 @@ export function AboutPage() {
 
       <section className="bg-white py-16 md:py-20" id="projects">
         <Container className="grid items-center gap-12 lg:grid-cols-2">
-          <img className="aspect-square w-full object-cover grayscale" src="/assets/about-logistics.jpg" alt="Warehouse manager coordinating industrial inventory." />
+          <img className="aspect-square w-full rounded-lg object-cover grayscale shadow-lg" src="/assets/about-logistics.jpg" alt="Warehouse manager coordinating industrial inventory." />
           <div>
             <h2 className="mb-8 font-heading text-4xl font-bold text-industrial-navy md:text-5xl">Why Leading Contractors Choose Us</h2>
             <div className="space-y-7">
@@ -74,10 +74,10 @@ export function AboutPage() {
       </section>
 
       <section className="bg-concrete-white py-16 md:py-20">
-        <Container className="border border-outline-variant bg-white px-6 py-12 text-center md:px-12">
+        <Container className="surface-card px-6 py-12 text-center md:px-12">
           <h2 className="mb-4 font-heading text-3xl font-bold text-industrial-navy md:text-4xl">Ready to Scale Your Construction Logistics?</h2>
           <p className="mx-auto mb-8 max-w-2xl text-steel-gray">Connect with our procurement experts to discuss your requirements and receive a custom quote within 24 hours.</p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row"><ButtonLink href="/contact">Get Started</ButtonLink><ButtonLink className="border-industrial-navy text-industrial-navy hover:bg-industrial-navy hover:text-white" href="/products" variant="secondary">Browse Catalogue</ButtonLink></div>
+          <div className="flex flex-col justify-center gap-4 sm:flex-row"><ButtonLink href="/contact">Get Started</ButtonLink><ButtonLink href="/products" variant="outline-dark">Browse Catalogue</ButtonLink></div>
         </Container>
       </section>
     </>

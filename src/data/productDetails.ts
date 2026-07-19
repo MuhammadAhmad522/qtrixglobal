@@ -32,6 +32,7 @@ export const productDetails: ProductDetail[] = [
       'Commercial and premium structural grades available.',
       'Bulk procurement options for projects of every scale.',
     ],
+    variants: ['Commercial Plywood', 'Premium White Wood', 'Formwork Plywood'],
     facts: [
       { label: 'Material origin', value: 'Certified global forests' },
       { label: 'Standard size', value: '1220mm x 2440mm' },
@@ -77,6 +78,7 @@ export const productDetails: ProductDetail[] = [
       'Copper and aluminium conductors for varied load requirements.',
       'Project-length cutting and numbered drum preparation.',
     ],
+    variants: ['Low Voltage Power', 'Building Wire', 'Control Cable', 'Armoured Cable'],
     facts: [
       { label: 'Voltage class', value: '0.6/1.0 kV' },
       { label: 'Conductor', value: 'Copper / Aluminium' },
@@ -108,6 +110,7 @@ export const productDetails: ProductDetail[] = [
       'Water-efficient mixer and sanitary fixture options.',
       'Coordinated collections for consistent project finishes.',
     ],
+    variants: ['Mixer Taps', 'Sanitary Fixtures', 'Kitchen Sinks', 'Accessories'],
     facts: [
       { label: 'Primary finish', value: 'Chrome / Brushed Steel' },
       { label: 'Application', value: 'Commercial & Residential' },
@@ -139,6 +142,7 @@ export const productDetails: ProductDetail[] = [
       'Precision-sharpened points for hardwood and concrete.',
       'Bulk industrial packaging available in 25kg and 50kg pails.',
     ],
+    variants: ['Common Round Nails', 'Concrete Steel Nails', 'Annealed Binding Wire', 'Finishing Nails'],
     facts: [
       { label: 'Material', value: 'Q195 Low Carbon Steel' },
       { label: 'Tensile strength', value: '350-550 N/mm2' },
@@ -170,6 +174,7 @@ export const productDetails: ProductDetail[] = [
       'Impact-rated steel toe protection for demanding sites.',
       'Ergonomic fit engineered for extended shift comfort.',
     ],
+    variants: ['Protective Shoes', 'Safety Helmets', 'Full-Body PPE'],
     facts: [
       { label: 'Series', value: 'QT-SF-2024-XP' },
       { label: 'Lead time', value: '3-5 Business Days' },
@@ -201,6 +206,7 @@ export const productDetails: ProductDetail[] = [
       'Torch-on bitumen systems for roofs and foundations.',
       'Complete jointing and protective-layer guidance.',
     ],
+    variants: ['HDPE Damp Proofing', 'Bitumen Torch-on', 'Protection Sheets'],
     facts: [
       { label: 'Thickness', value: '1200 Gauge' },
       { label: 'Tensile strength', value: '450 N/50mm' },
@@ -231,6 +237,7 @@ export const productDetails: ProductDetail[] = [
       'Interior, exterior, and heavy-duty industrial formulations.',
       'Project color matching and volume packaging support.',
     ],
+    variants: ['Epoxy Primer', 'Polyurethane Topcoat', 'Acrylic Coating', 'Floor Coating'],
     facts: [
       { label: 'Application', value: 'Steel & Concrete' },
       { label: 'Pack sizes', value: '5L / 20L' },

@@ -18,7 +18,6 @@ export interface ProductCategory {
   catalogImage?: string
   alt: string
   description: string
-  variants: string
   eyebrow?: string
   featured?: boolean
 }
@@ -40,6 +39,7 @@ export interface ProductDetail {
   alt: string
   description: string
   highlights: string[]
+  variants: string[]
   facts: Array<{ label: string; value: string }>
   specificationHeaders: string[]
   specificationRows: string[][]

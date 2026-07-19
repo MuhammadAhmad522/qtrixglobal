@@ -31,7 +31,6 @@ export const products: ProductCategory[] = [
     catalogImage: '/assets/catalog-plywood.jpg',
     alt: 'High-quality plywood stacks in an industrial warehouse.',
     description: 'Structural grade lumber and finishing plywood for formwork and framing.',
-    variants: '12 variants',
     featured: true,
   },
   {
@@ -42,7 +41,6 @@ export const products: ProductCategory[] = [
     catalogImage: '/assets/catalog-cables.jpg',
     alt: 'Industrial electric cables coiled neatly.',
     description: 'High-voltage transmission lines and residential grade wiring solutions.',
-    variants: '45 variants',
   },
   {
     name: 'Bathroom & Kitchen',
@@ -52,7 +50,6 @@ export const products: ProductCategory[] = [
     catalogImage: '/assets/catalog-bathroom.jpg',
     alt: 'Premium bathroom and kitchen fixtures.',
     description: 'Commercial grade fixtures and heavy-duty plumbing infrastructure.',
-    variants: '28 variants',
   },
   {
     name: 'Safety Gear',
@@ -62,7 +59,6 @@ export const products: ProductCategory[] = [
     catalogImage: '/assets/catalog-safety.jpg',
     alt: 'Professional construction safety gear.',
     description: 'ISO certified personal protective equipment for hazardous environments.',
-    variants: '32 variants',
   },
   {
     name: 'Steel & Nails',
@@ -72,7 +68,6 @@ export const products: ProductCategory[] = [
     catalogImage: '/assets/catalog-steel.jpg',
     alt: 'Industrial steel wires and galvanized nails.',
     description: 'Galvanized binding wires and industrial grade fasteners for masonry.',
-    variants: '150+ variants',
   },
   {
     name: 'Membranes & Sheets',
@@ -82,7 +77,6 @@ export const products: ProductCategory[] = [
     catalogImage: '/assets/catalog-membranes.jpg',
     alt: 'Construction membranes and waterproofing sheets.',
     description: 'Advanced waterproofing solutions and heavy-duty protective sheeting.',
-    variants: '18 variants',
   },
   {
     name: 'Industrial Paint',
@@ -91,7 +85,6 @@ export const products: ProductCategory[] = [
     image: '/assets/product-paint.jpg',
     alt: 'High-quality industrial paint in neutral shades.',
     description: 'High-performance protective coatings for demanding industrial surfaces.',
-    variants: '24 variants',
   },
 ]
 

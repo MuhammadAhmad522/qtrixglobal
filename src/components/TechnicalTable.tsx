@@ -5,7 +5,7 @@ interface TechnicalTableProps {
 
 export function TechnicalTable({ headers, rows }: TechnicalTableProps) {
   return (
-    <div className="overflow-x-auto border border-outline-variant bg-white">
+    <div className="overflow-x-auto rounded-lg border border-outline-variant bg-white shadow-sm">
       <table className="w-full min-w-[680px] border-collapse text-left">
         <thead className="bg-industrial-navy text-white">
           <tr>

@@ -11,7 +11,7 @@ export function ProductCard({ product, index }: ProductCardProps) {
 
   return (
     <Link
-      className={`group relative overflow-hidden border border-outline-variant bg-surface-container ${product.featured ? 'md:col-span-2' : ''} ${isTall ? 'h-80 md:h-[400px]' : 'h-64 md:h-[280px]'}`}
+      className={`group relative overflow-hidden rounded-lg border border-outline-variant bg-surface-container shadow-sm transition-shadow hover:shadow-xl ${product.featured ? 'md:col-span-2' : ''} ${isTall ? 'h-80 md:h-[400px]' : 'h-64 md:h-[280px]'}`}
       to={`/products/${product.slug}`}
     >
       <img

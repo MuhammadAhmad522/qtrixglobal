@@ -8,7 +8,7 @@ export function QualitySection() {
         <div className="order-2 lg:order-1">
           <div className="relative flex min-h-64 items-center pb-8 pr-0 sm:min-h-80 sm:pr-8 lg:pb-0">
             <div className="absolute left-0 right-16 top-1/2 h-3 -translate-y-1/2 bg-surface-dim" aria-hidden="true" />
-            <div className="relative z-20 ml-auto max-w-sm border-l-4 border-safety-orange bg-industrial-navy p-6 sm:p-8">
+            <div className="relative z-20 ml-auto max-w-sm rounded-lg border-l-4 border-safety-orange bg-industrial-navy p-6 shadow-xl sm:p-8">
               <h3 className="mb-2 font-heading text-xl font-semibold text-white sm:text-2xl">Sustainable Foundation</h3>
               <p className="text-sm leading-5 text-white/60">
                 Our &quot;Super Concrete&quot; technology reduces carbon footprint by 40% while maintaining industry-leading structural integrity.
@@ -23,7 +23,7 @@ export function QualitySection() {
           <div className="space-y-8">
             {qualityFeatures.map(({ description, icon: Icon, title }) => (
               <article className="flex gap-5 md:gap-6" key={title}>
-                <div className="flex size-12 shrink-0 items-center justify-center bg-industrial-navy text-safety-orange">
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-md bg-industrial-navy text-safety-orange shadow-sm">
                   <Icon aria-hidden="true" className="size-5" />
                 </div>
                 <div>

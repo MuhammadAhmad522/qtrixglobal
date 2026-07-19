@@ -5,6 +5,7 @@ import { TechnicalTable } from '../components/TechnicalTable'
 import { ButtonLink } from '../components/ui/ButtonLink'
 import { Container } from '../components/ui/Container'
 import { PageHero } from '../components/ui/PageHero'
+import { getProductBySlug } from '../data/productDetails'
 import { products } from '../data/siteContent'
 import type { ProductFilter } from '../types/content'
 
@@ -99,7 +100,9 @@ export function ProductsPage() {
                 <h2 className="mb-2 font-heading text-2xl font-semibold text-industrial-navy group-hover:text-safety-orange">{product.name}</h2>
                 <p className="mb-5 text-sm leading-5 text-steel-gray">{product.description}</p>
                 <div className="mt-auto flex items-center justify-between border-t border-outline-variant/50 pt-4">
-                  <span className="font-label text-industrial-navy">{product.variants}</span>
+                  <span className="font-label text-industrial-navy">
+                    {getProductBySlug(product.slug)?.variants.length ?? 0} variants
+                  </span>
                   <Link className="flex items-center gap-1 font-label text-safety-orange" to={`/products/${product.slug}`}>Explore <ArrowRight className="size-3" /></Link>
                 </div>
               </div>
@@ -107,7 +110,7 @@ export function ProductsPage() {
           ))}
         </div>
         {filteredProducts.length === 0 && (
-          <div className="border border-outline-variant bg-white px-6 py-16 text-center">
+          <div className="surface-card px-6 py-16 text-center">
             <h2 className="font-heading text-2xl font-semibold text-industrial-navy">No matching products</h2>
             <p className="mt-2 text-steel-gray">Try a different material name or category.</p>
           </div>

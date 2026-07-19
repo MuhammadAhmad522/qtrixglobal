@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 interface ButtonLinkProps {
   children: ReactNode
   href: string
-  variant?: 'primary' | 'secondary' | 'dark' | 'light'
+  variant?: 'primary' | 'secondary' | 'outline-dark' | 'dark' | 'light'
   className?: string
 }
 
@@ -12,6 +12,8 @@ const variantClasses = {
   primary: 'bg-safety-orange text-white hover:bg-secondary',
   secondary:
     'border-2 border-white bg-transparent text-white hover:bg-white hover:text-industrial-navy',
+  'outline-dark':
+    'border-2 border-industrial-navy bg-transparent text-industrial-navy hover:bg-industrial-navy hover:text-white',
   dark: 'bg-industrial-navy text-white hover:bg-black',
   light: 'bg-white text-safety-orange hover:bg-concrete-white',
 }
